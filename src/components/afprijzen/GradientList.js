@@ -7,14 +7,14 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import { Box, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    marginLeft: '15vw',
+    marginLeft: '8vw',
   },
   demo: {
     backgroundColor: 'none'
@@ -33,7 +33,7 @@ export default function GradientList() {
 
   return (
     <div className={classes.root}>
-        <Grid item xs={10} md={8}>
+        <Grid item xs={11}>
 
           <div className={classes.demo}>
           <br></br><br></br><br></br><br></br>
@@ -42,10 +42,8 @@ export default function GradientList() {
                 <ListItem className="gradientlistitem">
                   <ListItemAvatar>
                   </ListItemAvatar>
-                  <Typography>
-                    <Box fontWeight="fontWeightBold">
-                        Kassakorting 26-10 t/m 01-11
-                    </Box>
+                  <Typography variant="h6">
+                    <b>Kassakorting 26-10 t/m 01-11</b>
                   </Typography>
                   <ListItemSecondaryAction>
                     <IconButton edge="end" aria-label="delete">
@@ -59,10 +57,23 @@ export default function GradientList() {
                 <ListItem className="gradientlistitem">
                   <ListItemAvatar>
                   </ListItemAvatar>
-                  <Typography>
-                    <Box fontWeight="fontWeightBold">
-                        De "klusweek" korting 02-11 t/m 08-11
-                    </Box>
+                  <Typography variant="h6">
+                    <b>De "klusweek" korting 02-11 t/m 08-11</b>
+                  </Typography>
+                  <ListItemSecondaryAction>
+                    <IconButton edge="end" aria-label="delete">
+                      <ArrowForwardIosIcon />
+                    </IconButton>
+                  </ListItemSecondaryAction>
+                </ListItem>
+              </Link>
+                <br></br>
+              <Link to="/afprijzen/korting3" className={classes.link}>
+                <ListItem className="gradientlistitem">
+                  <ListItemAvatar>
+                  </ListItemAvatar>
+                  <Typography variant="h6">
+                    <b>Kassakorting 05-11 t/m 11-11</b>
                   </Typography>
                   <ListItemSecondaryAction>
                     <IconButton edge="end" aria-label="delete">
