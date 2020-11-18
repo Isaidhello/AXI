@@ -10,10 +10,12 @@ import MenuIcon from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import SettingsIcon from '@material-ui/icons/Settings';
-import SearchBar from "material-ui-search-bar";
 
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
+import { BrowserRouter} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route}from 'react-router-dom';
+
+import Afprijzen from './components/afprijzen/Afprijzen.js';
+import Homepage from './components/Homepage.js';
 
 const useStyles = makeStyles((theme) => ({
   homescreen: {
@@ -66,13 +68,9 @@ const useStyles = makeStyles((theme) => ({
 
 function Home() {
   const classes = useStyles();
-  const [auth, setAuth] = React.useState(true);
+  const [auth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-
-  const handleChange = (event) => {
-    setAuth(event.target.checked);
-  };
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -164,97 +162,35 @@ function Home() {
         </Toolbar>
       </AppBar>
 
-      {/* Cards en searchbar container */}
-      <Grid container justify="center" spacing={3} className={classes.cardsContainer}>
-        <Grid item >
-          <SearchBar
-            placeholder='Scan of zoek hier een product'
-            style={{
-              width: 650,
-              height: 60,
-            }}
-          />
-        </Grid>
+      <BrowserRouter>
+        <Router>
+            <Switch>
+              <Route exact path="/home" component={Homepage}>
 
-        <Grid item xs={6} >
-          <Card className={classes.card} variant="outlined">
-            <CardContent>
-              <Typography className={classes.title} color="textSecondary" gutterBottom>
+              </Route>
+              <Route exact path="/afprijzen" component={Afprijzen}>
+                
+              </Route>
+              <Route exact path="/bestellen" component="">
                 Bestellen
-              </Typography>
-              <Typography variant="h5" component="h2">
-                Bestellen
-               </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        <Grid item xs={6}>
-          <Card className={classes.card} variant="outlined">
-            <CardContent>
-              <Typography className={classes.title} color="textSecondary" gutterBottom>
+              </Route>
+              <Route exact path="/schaplabel" component="">
                 Schaplabel
-              </Typography>
-              <Typography variant="h5" component="h2">
-                Schaplabel
-               </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        <Grid item xs={6}>
-          <Card className={classes.card} variant="outlined">
-            <CardContent>
-              <Typography className={classes.title} color="textSecondary" gutterBottom>
+              </Route>
+              <Route exact path="/voorraad" component="">
                 Voorraad
-              </Typography>
-              <Typography variant="h5" component="h2">
-                Voorraad
-               </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        <Grid item xs={6}>
-          <Card className={classes.card} variant="outlined">
-            <CardContent>
-              <Typography className={classes.title} color="textSecondary" gutterBottom>
-                Binnenkomend
-              </Typography>
-              <Typography variant="h5" component="h2">
-                Binnenkomend
-               </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        <Grid item xs={6}>
-          <Card className={classes.card} variant="outlined">
-            <CardContent>
-              <Typography className={classes.title} color="textSecondary" gutterBottom>
+              </Route>
+              <Route exact path="/afschrijven" component="">
                 Afschrijven
-              </Typography>
-              <Typography variant="h5" component="h2">
-                Afschrijven
-               </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+              </Route>
+              <Route exact path="/binnenkomend" component="">
+                Binnenkomend
+              </Route>
+            </Switch>
+          </Router>
+      </BrowserRouter>
 
-        <Grid item xs={6}>
-          <Card className={classes.card} variant="outlined">
-            <CardContent>
-              <Typography className={classes.title} color="textSecondary" gutterBottom>
-                Afprijzen
-              </Typography>
-              <Typography variant="h5" component="h2">
-                Afprijzen
-               </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-      </Grid>
+      
     </Grid>
   );
 }
