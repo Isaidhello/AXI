@@ -13,13 +13,13 @@ const useStyles = makeStyles((theme) => ({
   homescreen: {
     width: '100vw',
     height: '100vh',
-    background: "linear-gradient(135deg, rgba(29,95,192,1) 0%, rgba(28,90,198,1) 100%);",
+    background: "linear-gradient(135deg, rgba(29,95,192,1) 0%, rgba(28,90,198,1) 100%);"
   },
   root: {
     flexGrow: 1,
   },
   appBar: {
-    height: '7%'
+    height: '8%',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme) => ({
   },
   cardsContainer: {
     marginLeft: "5px",
-    marginRight: "5px"
+    marginRight: "5px",
+    marginTop: '0.5ch'
   },
   searchBar: {
     marginBottom: "10px",
@@ -66,6 +67,7 @@ const Homepage = () => {
       const classes = useStyles();
 
       return( 
+      <Grid container alignItems="flex-start" className={classes.homescreen}>
       <Grid container justify="center" spacing={3} className={classes.cardsContainer}>
         <Grid item >
           <SearchBar
@@ -167,6 +169,7 @@ const Homepage = () => {
           </Link>
         </Grid>
 
+      </Grid>
       </Grid>
       )}
 

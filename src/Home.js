@@ -25,9 +25,11 @@ const useStyles = makeStyles((theme) => ({
   },
   root: {
     flexGrow: 1,
+    background: "linear-gradient(135deg, rgba(29,95,192,1) 0%, rgba(28,90,198,1) 100%);"
   },
   appBar: {
-    height: '7%'
+    height: '7%',
+    paddingBottom: '1ch'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -64,6 +66,11 @@ const useStyles = makeStyles((theme) => ({
   settingsContainer: {
     height: "100%"
   },
+  main: {
+    background: "linear-gradient(135deg, rgba(29,95,192,1) 0%, rgba(28,90,198,1) 100%);",
+    width: '100vw',
+    height: '100vh'
+  }
 }));
 
 function Home() {
@@ -80,8 +87,8 @@ function Home() {
     setAnchorEl(null);
   };
   return (
-    // Gehele homescreen container
-    <Grid container alignItems="flex-start" className={classes.homescreen}>
+    <div className={classes.main}>
+    
 
       {/* Appbar */}
       <AppBar position="static" color="default" className={classes.appBar}>
@@ -172,26 +179,26 @@ function Home() {
                 
               </Route>
               <Route exact path="/bestellen" component="">
-                Bestellen
+                <h1>Bestellen</h1>
               </Route>
               <Route exact path="/schaplabel" component="">
-                Schaplabel
+                <h1>Schaplabel</h1>
               </Route>
               <Route exact path="/voorraad" component="">
-                Voorraad
+                <h1>Voorraad</h1>
               </Route>
               <Route exact path="/afschrijven" component="">
-                Afschrijven
+                <h1>Afschrijven</h1>
               </Route>
               <Route exact path="/binnenkomend" component="">
-                Binnenkomend
+              <h1>Binnenkomend</h1>
               </Route>
             </Switch>
           </Router>
       </BrowserRouter>
 
       
-    </Grid>
+    </div>
   );
 }
 
