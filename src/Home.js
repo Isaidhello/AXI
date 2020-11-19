@@ -3,12 +3,13 @@ import './Homescreen.css';
 import { makeStyles } from '@material-ui/core/styles';
 
 
-import { BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { BrowserRouter as Router, Switch, Route}from 'react-router-dom';
 
 import Afprijzen from './components/afprijzen/Afprijzen.js';
 import Homepage from './components/Homepage.js';
 import Header from './components/Header';
+import ProductList from './components/afprijzen/swipeable/BasicExample';
 
 const useStyles = makeStyles((theme) => ({
   homescreen: {
@@ -82,6 +83,15 @@ function Home() {
               </Route>
               <Route exact path="/afprijzen" component={Afprijzen}>
                 
+              </Route>
+              <Route exact path="/afprijzen/korting1">
+                <br></br><br></br><br></br><br></br><br></br><ProductList/>
+              </Route>
+              <Route exact path="/afprijzen/korting2">
+                korting 2
+              </Route>
+              <Route exact path="/afprijzen/korting3">
+                korting 3
               </Route>
               <Route exact path="/bestellen" component="">
                 <h1>Bestellen</h1>
