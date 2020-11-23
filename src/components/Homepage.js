@@ -7,19 +7,29 @@ import Typography from '@material-ui/core/Typography';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import { Link } from 'react-router-dom'
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import LocalShippingIcon from '@material-ui/icons/LocalShipping';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import EuroIcon from '@material-ui/icons/Euro';
+import ViewWeekIcon from '@material-ui/icons/ViewWeek';
+import Badge from '@material-ui/core/Badge';
+import OwnSearchBar from './SearchBar';
+
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   homescreen: {
     width: '100vw',
     height: '100vh',
-    background: "linear-gradient(135deg, rgba(29,95,192,1) 0%, rgba(28,90,198,1) 100%);"
+    background: "linear-gradient(135deg, rgba(29,95,192,1) 0%, rgba(28,90,198,1) 100%);",
   },
   root: {
     flexGrow: 1,
+    background: "linear-gradient(135deg, rgba(29,95,192,1) 0%, rgba(28,90,198,1) 100%);"
   },
   appBar: {
-    height: '8%',
+    height: '7%',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -29,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    color: "#767676"
+    color: "#767676",
   },
   subTitle: {
     flexGrow: 1,
@@ -43,23 +53,56 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "40px",
   },
   card: {
-    height: "340px",
+    height: "25vh",
+    width: "45vw"
   },
   cardsContainer: {
-    marginLeft: "5px",
+    marginLeft: "7px",
     marginRight: "5px",
-    marginTop: '0.5ch'
-  },
-  searchBar: {
-    marginBottom: "10px",
-    height: "150px"
+    marginTop:"-100px"
   },
   settingsContainer: {
     height: "100%"
   },
-  link: {
-    textDecoration:'none'
-  }
+  buttonFont: {
+    color: "#4688D7",
+    fontWeight: "bold",
+    textDecoration: "none",
+  },
+  shoppingCartIcon: {
+    color: "#4688D7",
+    fontSize: "60px",
+  },
+  assignmentIcon: {
+    color: "#4688D7",
+    fontSize: "60px",
+  },
+  localShippingIcon: {
+    color: "#4688D7",
+    fontSize: "60px",
+  },
+  deleteForeverIcon: {
+    color: "#4688D7",
+    fontSize: "60px",
+  },
+  euroIcon: {
+    color: "#4688D7",
+    fontSize: "60px",
+  },
+  viewWeekIcon: {
+    color: "#4688D7",
+    fontSize: "60px",
+  },
+  badgeWidth: {
+    width: '100%'
+  },
+  content: {
+    marginTop: "30%",
+  main: {
+    background: "linear-gradient(135deg, rgba(29,95,192,1) 0%, rgba(28,90,198,1) 100%);",
+    width: '100vw',
+    height: '100vh'
+  }}
 }));
 
 const Homepage = () => {
@@ -68,96 +111,137 @@ const Homepage = () => {
 
       return( 
       <Grid container alignItems="flex-start" className={classes.homescreen}>
+       <OwnSearchBar />
       <Grid container justify="center" spacing={3} className={classes.cardsContainer}>
 
-        <Grid item xs={6} >
-          <Link to="/bestellen" className={classes.link}>
+      <Grid item xs={6} ><Link to="/bestellen" style={{textDecoration: "none"}}>
+          <Badge badgeContent={4} color="error" className={classes.badgeWidth} >
             <Card className={classes.card} variant="outlined">
-              <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                  Bestellen
-                </Typography>
-                <Typography variant="h5" component="h2">
-                  Bestellen
-                </Typography>
+              <CardContent className={classes.content}>
+                <Grid container item xs={12} justify="center" alignItems="center">
+                  <Grid item>
+                    <Typography className={classes.title} color="textSecondary" gutterBottom>
+                      <ShoppingCartIcon className={classes.shoppingCartIcon} />
+                    </Typography>
+                  </Grid>
+                </Grid>
+                <Grid container item xs={12} justify="center">
+                  <Grid item >
+                    <Typography variant="h5" className={classes.buttonFont}>
+                      Bestellen
+               </Typography>
+                  </Grid>
+                </Grid>
               </CardContent>
             </Card>
-          </Link>
+          </Badge></Link>
         </Grid>
 
         <Grid item xs={6}>
-          <Link to="/schaplabel" className={classes.link}>
+          <Badge badgeContent={4} color="error"  >
             <Card className={classes.card} variant="outlined">
-              <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                  Schaplabel
-                </Typography>
-                <Typography variant="h5" component="h2">
-                  Schaplabel
-                </Typography>
+              <CardContent className={classes.content}>
+                <Grid container item xs={12} justify="center">
+                  <Grid item>
+                    <Typography className={classes.title} color="textSecondary" gutterBottom>
+                      <ViewWeekIcon className={classes.viewWeekIcon} />
+                    </Typography>
+                  </Grid>
+                </Grid>
+                <Grid container item xs={12} justify="center">
+                  <Grid item>
+                    <Typography variant="h5" className={classes.buttonFont}>
+                      Schaplabel
+                  </Typography>
+                  </Grid>
+                </Grid>
               </CardContent>
             </Card>
-          </Link>
+          </Badge>
         </Grid>
 
         <Grid item xs={6}>
-          <Link to="/voorraad" className={classes.link}>
-            <Card className={classes.card} variant="outlined">
-              <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                  Voorraad
-                </Typography>
-                <Typography variant="h5" component="h2">
-                  Voorraad
-                </Typography>
-              </CardContent>
-            </Card>
-          </Link>
+          <Card className={classes.card} variant="outlined">
+            <CardContent className={classes.content}>
+              <Grid container item xs={12} justify="center">
+                <Grid item>
+                  <Typography className={classes.title} color="textSecondary" gutterBottom>
+                    <AssignmentIcon className={classes.assignmentIcon} />
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid container item xs={12} justify="center">
+                <Grid item>
+                  <Typography variant="h5" className={classes.buttonFont}>
+                    Voorraad
+               </Typography>
+                </Grid>
+              </Grid>
+            </CardContent>
+          </Card>
         </Grid>
 
         <Grid item xs={6}>
-          <Link to="/binnenkomend" className={classes.link}>
-            <Card className={classes.card} variant="outlined">
-              <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                  Binnenkomend
-                </Typography>
-                <Typography variant="h5" component="h2">
-                  Binnenkomend
-                </Typography>
-              </CardContent>
-            </Card>
-          </Link>
+          <Card className={classes.card} variant="outlined">
+            <CardContent className={classes.content}>
+              <Grid container item xs={12} justify="center">
+                <Grid item>
+                  <Typography className={classes.title} color="textSecondary" gutterBottom>
+                    <LocalShippingIcon className={classes.localShippingIcon} />
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid container item xs={12} justify="center">
+                <Grid item>
+                  <Typography variant="h5" className={classes.buttonFont}>
+                    Binnenkomend
+               </Typography>
+                </Grid>
+              </Grid>
+            </CardContent>
+          </Card>
         </Grid>
 
         <Grid item xs={6}>
-          <Link to="/afschrijven" className={classes.link}>
-            <Card className={classes.card} variant="outlined">
-              <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                  Afschrijven
-                </Typography>
-                <Typography variant="h5" component="h2">
-                  Afschrijven
-                </Typography>
-              </CardContent>
-            </Card>
-          </Link>
+          <Card className={classes.card} variant="outlined">
+            <CardContent className={classes.content}>
+              <Grid container item xs={12} justify="center">
+                <Grid item>
+                  <Typography className={classes.title} color="textSecondary" gutterBottom>
+                    <DeleteForeverIcon className={classes.deleteForeverIcon} />
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid container item xs={12} justify="center">
+                <Grid item>
+                  <Typography variant="h5" className={classes.buttonFont}>
+                    Afschrijven
+               </Typography>
+                </Grid>
+              </Grid>
+            </CardContent>
+          </Card>
         </Grid>
 
         <Grid item xs={6}>
-          <Link to="/afprijzen" className={classes.link}>
-            <Card className={classes.card} variant="outlined">
-              <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                  Afprijzen
-                </Typography>
-                <Typography variant="h5" component="h2">
-                  Afprijzen
-                </Typography>
-              </CardContent>
-            </Card>
-          </Link>
+          <Card className={classes.card} variant="outlined">
+            <CardContent className={classes.content}>
+              <Grid container item xs={12} justify="center">
+                <Grid item>
+                  <Typography className={classes.title} color="textSecondary" gutterBottom>
+                    <EuroIcon className={classes.euroIcon} />
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid container item xs={12} justify="center">
+                <Grid item>
+                  <Typography variant="h5" className={classes.buttonFont}>
+                    Afprijzen
+               </Typography>
+                </Grid>
+              </Grid>
+            </CardContent>
+          </Card>
         </Grid>
 
       </Grid>

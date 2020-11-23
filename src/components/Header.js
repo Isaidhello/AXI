@@ -11,7 +11,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import SettingsIcon from '@material-ui/icons/Settings';
-import SearchBar from "material-ui-search-bar";
+
 
 const useStyles = makeStyles((theme) => ({
   homescreen: {
@@ -84,94 +84,84 @@ const Header = () => {
 
       return( 
         <div>
-          <AppBar position="static" color="default" className={classes.appBar}>
-          <Toolbar>
+          {/* Appbar */}
+      <AppBar position="static" color="default" className={classes.appBar}>
+        <Toolbar>
 
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              <MenuIcon className={classes.menuIcon} />
-            </IconButton>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon className={classes.menuIcon} />
+          </IconButton>
 
-            {/* Titel bedrijf, werkenemer en functie */}
-            <Grid container justify="center" direction="column" spacing={2}>
-              <Grid container item xs={12} justify="center">
-                <Grid item>
-                  <Typography variant="h4" className={classes.title}>
-                    Dille & Kamille
-            </Typography>
-                </Grid>
+          {/* Titel bedrijf, werkenemer en functie */}
+          <Grid container justify="center" direction="column" spacing={2}>
+            <Grid container item xs={12} justify="center">
+              <Grid item>
+                <Typography variant="h4" className={classes.title}>
+                  Dille & Kamille
+          </Typography>
               </Grid>
-
-              {/* Naam en functie gedeelte */}
-              <Grid container direction="row">
-
-                <Grid item container justify="center" xs={6}>
-                  <Grid item>
-                    <Typography variant="h6" className={classes.subTitle}>
-                      Stephanie van der Bie
-                  </Typography>
-                  </Grid>
-                </Grid>
-
-                <Grid item container justify="center" xs={6}>
-                  <Grid item>
-                    <Typography variant="h6" className={classes.subTitle}>
-                      Verkoop medewerkster
-                  </Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-
             </Grid>
-            {auth && (
-              <div>
-                <IconButton
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
-                  onClick={handleMenu}
-                  color="inherit"
-                >
-                  {/* Work in progress menu en settings icon verdelen in grid items/containers */}
-                  <Grid container alignItems="center" className={classes.settingsContainer}>
-                    <Grid item>
-                      <SettingsIcon className={classes.settingsIcon} />
-                    </Grid>
-                  </Grid>
 
-                </IconButton>
-                <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorEl}
-                  anchorOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  open={open}
-                  onClose={handleClose}
-                >
-                  <MenuItem onClick={handleClose}>Profile</MenuItem>
-                  <MenuItem onClick={handleClose}>My account</MenuItem>
-                </Menu>
-              </div>
-            )}
-          </Toolbar>
-        </AppBar>
-        <Grid item >
-            <SearchBar
-              placeholder='Scan of zoek hier een product'
-              style={{
-                width: 650,
-                height: 60,
-                marginLeft: '35px',
-                marginTop: '20px'
-              }}
-            />
+            {/* Naam en functie gedeelte */}
+            <Grid container direction="row">
+
+              <Grid item container justify="center" xs={6}>
+                <Grid item>
+                  <Typography variant="h6" className={classes.subTitle}>
+                    Stephanie van der Bie
+                </Typography>
+                </Grid>
+              </Grid>
+
+              <Grid item container justify="center" xs={6}>
+                <Grid item>
+                  <Typography variant="h6" className={classes.subTitle}>
+                    Verkoop medewerkster
+                </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+
           </Grid>
+          {auth && (
+            <div>
+              <IconButton
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleMenu}
+                color="inherit"
+              >
+                {/* Work in progress menu en settings icon verdelen in grid items/containers */}
+                <Grid container alignItems="center" className={classes.settingsContainer}>
+                  <Grid item>
+                    <SettingsIcon className={classes.settingsIcon} />
+                  </Grid>
+                </Grid>
+
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>My account</MenuItem>
+              </Menu>
+            </div>
+          )}
+        </Toolbar>
+      </AppBar>
         </div>
       )}
 
