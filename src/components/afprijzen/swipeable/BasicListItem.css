@@ -1,0 +1,40 @@
+.basic-swipeable-list__item {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  margin-left: -4%;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.listitem {
+  margin-bottom: 0.5ch;
+  margin-top: 0.5ch;
+}
+
+.listItemText {
+  padding-left: 2ch!important;
+}
+
+.cell1 {
+  width: 310px!important;
+  font-size: 26px!important;
+  border-bottom: none;
+}
+
+.cell2 {
+  width:60px!important;
+  font-size: 26px!important;
+  border-bottom: none;
+  padding-right: 100px!important;
+  text-align: right!important;
+}
+
+.editicon {
+  padding-top:10px;
+}
+
+.listItemAvatar {
+  padding-left:5ch;
+}
