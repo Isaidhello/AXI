@@ -3,7 +3,7 @@ import '../Homescreen.css';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import SearchBar from "material-ui-search-bar";
+
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -69,15 +69,6 @@ const Homepage = () => {
       return( 
       <Grid container alignItems="flex-start" className={classes.homescreen}>
       <Grid container justify="center" spacing={3} className={classes.cardsContainer}>
-        <Grid item >
-          <SearchBar
-            placeholder='Scan of zoek hier een product'
-            style={{
-              width: 650,
-              height: 60,
-            }}
-          />
-        </Grid>
 
         <Grid item xs={6} >
           <Link to="/bestellen" className={classes.link}>

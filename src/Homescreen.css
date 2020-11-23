@@ -5,3 +5,7 @@
   color: #4A61ED;
   font-weight: bold;
 }
+
+body {
+  overflow: hidden;
+}

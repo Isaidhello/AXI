@@ -4,12 +4,15 @@ import { makeStyles } from '@material-ui/core/styles';
 
 
 import { BrowserRouter } from 'react-router-dom';
-import { BrowserRouter as Router, Switch, Route}from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link }from 'react-router-dom';
 
 import Afprijzen from './components/afprijzen/Afprijzen.js';
 import Homepage from './components/Homepage.js';
 import Header from './components/Header';
 import ProductList from './components/afprijzen/swipeable/BasicExample';
+import FABRechtsOnder from './components/afprijzen/FABRechtsOnder';
+import CardsHomeKlein from './components/afprijzen/CardsHomeKlein';
+import ProductInfo from './components/afprijzen/ProductInfo';
 
 const useStyles = makeStyles((theme) => ({
   homescreen: {
@@ -85,13 +88,19 @@ function Home() {
                 
               </Route>
               <Route exact path="/afprijzen/korting1">
-                <br></br><br></br><br></br><br></br><br></br><ProductList/>
+                <br></br><br></br><br></br><br></br><ProductList/>
+                <Link to="/producttoevoegen">Simuleer een product scan</Link>
+                <FABRechtsOnder />
               </Route>
               <Route exact path="/afprijzen/korting2">
                 korting 2
               </Route>
               <Route exact path="/afprijzen/korting3">
                 korting 3
+              </Route>
+              <Route exact path="/producttoevoegen">
+                <ProductInfo />
+                <CardsHomeKlein />
               </Route>
               <Route exact path="/bestellen" component="">
                 <h1>Bestellen</h1>

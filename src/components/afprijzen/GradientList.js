@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     marginLeft: '8vw',
+    marginTop: '0'
   },
   demo: {
     backgroundColor: 'none'
@@ -36,7 +37,7 @@ export default function GradientList() {
         <Grid item xs={11}>
 
           <div className={classes.demo}>
-          <br></br><br></br><br></br><br></br>
+          <br></br><br></br><br></br>
             <List dense={dense}>
               <Link to="/afprijzen/korting1" className={classes.link}>
                 <ListItem className="gradientlistitem">
