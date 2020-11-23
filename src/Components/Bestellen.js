@@ -1,6 +1,8 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Headerflow from './HeaderFlow';
+
 
 const useStyles = makeStyles((theme) => ({
     topBar: {
@@ -14,7 +16,7 @@ function Bestellen() {
         <Grid container>
             {/* Top bar */}
             <Grid container item xs={12} className={classes.topBar}>
-
+            <Headerflow />
             </Grid>
             {/* Content */}
             <Grid container>
