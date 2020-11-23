@@ -10,10 +10,18 @@ import MenuIcon from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import SettingsIcon from '@material-ui/icons/Settings';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import LocalShippingIcon from '@material-ui/icons/LocalShipping';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import EuroIcon from '@material-ui/icons/Euro';
+import ViewWeekIcon from '@material-ui/icons/ViewWeek';
 import SearchBar from "material-ui-search-bar";
+import Badge from '@material-ui/core/Badge';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import { FormatBold } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   homescreen: {
@@ -62,6 +70,40 @@ const useStyles = makeStyles((theme) => ({
   settingsContainer: {
     height: "100%"
   },
+  buttonFont: {
+    color: "#4688D7",
+    fontWeight: "bold"
+  },
+  shoppingCartIcon: {
+    color: "#4688D7",
+    fontSize: "60px",  
+  },
+  assignmentIcon: {
+    color: "#4688D7",
+    fontSize: "60px",  
+  },
+  localShippingIcon: {
+    color: "#4688D7",
+    fontSize: "60px",  
+  },
+  deleteForeverIcon: {
+    color: "#4688D7",
+    fontSize: "60px",  
+  },
+  euroIcon: {
+    color: "#4688D7",
+    fontSize: "60px",  
+  },
+  viewWeekIcon: {
+    color: "#4688D7",
+    fontSize: "60px",  
+  },
+  badgeWidth: {
+    width: '100%'
+  },
+  knopFill:{
+    width: '100%'
+  }
 }));
 
 function Home() {
@@ -176,28 +218,47 @@ function Home() {
           />
         </Grid>
 
-        <Grid item xs={6} >
-          <Card className={classes.card} variant="outlined">
+
+        <Grid item xs={6}>
+        <Badge badgeContent={4} color="error" className={classes.badgeWidth} >
+          <Card className={classes.card} variant="outlined" className={classes.badgeWidth}>
             <CardContent>
+            <Grid container item xs={12} justify="center">
+              <Grid item>
               <Typography className={classes.title} color="textSecondary" gutterBottom>
+              <br></br><br></br><br></br><br></br><ShoppingCartIcon className={classes.shoppingCartIcon} />
+              </Typography>
+              </Grid>
+              </Grid>
+              <Grid container item xs={12} justify="center">
+              <Grid item>
+              <Typography variant="h5" className={classes.buttonFont}>
                 Bestellen
-              </Typography>
-              <Typography variant="h5" component="h2">
-                Bestellen
                </Typography>
+               </Grid>
+            </Grid>
             </CardContent>
           </Card>
+          </Badge>
         </Grid>
 
         <Grid item xs={6}>
           <Card className={classes.card} variant="outlined">
             <CardContent>
+            <Grid container item xs={12} justify="center">
+              <Grid item>
               <Typography className={classes.title} color="textSecondary" gutterBottom>
+              <br></br><br></br><br></br><br></br><ViewWeekIcon className={classes.viewWeekIcon} />
+              </Typography>
+              </Grid>
+              </Grid>
+              <Grid container item xs={12} justify="center">
+              <Grid item>
+              <Typography variant="h5" className={classes.buttonFont}>
                 Schaplabel
-              </Typography>
-              <Typography variant="h5" component="h2">
-                Schaplabel
                </Typography>
+               </Grid>
+            </Grid>
             </CardContent>
           </Card>
         </Grid>
@@ -205,12 +266,20 @@ function Home() {
         <Grid item xs={6}>
           <Card className={classes.card} variant="outlined">
             <CardContent>
+            <Grid container item xs={12} justify="center">
+              <Grid item>
               <Typography className={classes.title} color="textSecondary" gutterBottom>
+              <br></br><br></br><br></br><br></br><AssignmentIcon className={classes.assignmentIcon} />
+              </Typography>
+              </Grid>
+              </Grid>
+              <Grid container item xs={12} justify="center">
+              <Grid item>
+              <Typography variant="h5" className={classes.buttonFont}>
                 Voorraad
-              </Typography>
-              <Typography variant="h5" component="h2">
-                Voorraad
                </Typography>
+               </Grid>
+            </Grid>
             </CardContent>
           </Card>
         </Grid>
@@ -218,38 +287,62 @@ function Home() {
         <Grid item xs={6}>
           <Card className={classes.card} variant="outlined">
             <CardContent>
+            <Grid container item xs={12} justify="center">
+              <Grid item>
               <Typography className={classes.title} color="textSecondary" gutterBottom>
+              <br></br><br></br><br></br><br></br><LocalShippingIcon className={classes.localShippingIcon} />
+              </Typography>
+              </Grid>
+              </Grid>
+              <Grid container item xs={12} justify="center">
+              <Grid item>
+              <Typography variant="h5" className={classes.buttonFont}>
                 Binnenkomend
-              </Typography>
-              <Typography variant="h5" component="h2">
-                Binnenkomend
                </Typography>
+               </Grid>
+            </Grid>
             </CardContent>
           </Card>
         </Grid>
 
         <Grid item xs={6}>
-          <Card className={classes.card} variant="outlined">
+        <Card className={classes.card} variant="outlined">
             <CardContent>
+            <Grid container item xs={12} justify="center">
+              <Grid item>
               <Typography className={classes.title} color="textSecondary" gutterBottom>
-                Afschrijven
+              <br></br><br></br><br></br><br></br><DeleteForeverIcon className={classes.deleteForeverIcon} />
               </Typography>
-              <Typography variant="h5" component="h2">
+              </Grid>
+              </Grid>
+              <Grid container item xs={12} justify="center">
+              <Grid item>
+              <Typography variant="h5" className={classes.buttonFont}>
                 Afschrijven
                </Typography>
+               </Grid>
+            </Grid>
             </CardContent>
           </Card>
         </Grid>
 
         <Grid item xs={6}>
-          <Card className={classes.card} variant="outlined">
+        <Card className={classes.card} variant="outlined">
             <CardContent>
+            <Grid container item xs={12} justify="center">
+              <Grid item>
               <Typography className={classes.title} color="textSecondary" gutterBottom>
-                Afprijzen
+              <br></br><br></br><br></br><br></br><EuroIcon className={classes.euroIcon} />
               </Typography>
-              <Typography variant="h5" component="h2">
+              </Grid>
+              </Grid>
+              <Grid container item xs={12} justify="center">
+              <Grid item>
+              <Typography variant="h5" className={classes.buttonFont}>
                 Afprijzen
                </Typography>
+               </Grid>
+            </Grid>
             </CardContent>
           </Card>
         </Grid>
