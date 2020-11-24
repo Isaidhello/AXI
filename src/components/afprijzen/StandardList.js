@@ -19,9 +19,38 @@ import Divider from '@material-ui/core/Divider';
 
 export default function StandardList() {
 
-    const [count1, setCount1] = useState(0);
-    const [count2, setCount2] = useState(0);
-    const [count3, setCount3] = useState(0);
+    const [count1, setCount1] = useState(Number(localStorage.getItem('count1')));
+    const [count2, setCount2] = useState(Number(localStorage.getItem('count2')));
+    const [count3, setCount3] = useState(Number(localStorage.getItem('count3')));
+
+    function zeepAdd() {
+        setCount1(count1 + 1);
+        localStorage.setItem('count1', (count1 + 1));
+    }
+    function zeepRemove() {
+        setCount1(count1 - 1);
+        localStorage.setItem('count1', (count1 - 1));
+    }
+
+    function strokorrelAdd() {
+        setCount2(count2 + 1);
+        localStorage.setItem('count2', (count2 + 1));
+    }
+    function strokorrelRemove() {
+        setCount2(count2 - 1);
+        localStorage.setItem('count2', (count2 - 1));
+    }
+
+    function vogelAdd() {
+        setCount3(count3 + 1);
+        localStorage.setItem('count3', (count3 + 1));
+    }
+    function vogelRemove() {
+        setCount3(count3 - 1);
+        localStorage.setItem('count3', (count3 - 1));
+    }
+
+    
 
     return (
         <div>
@@ -37,10 +66,10 @@ export default function StandardList() {
                     </Typography>
                     </ListItemText>
                     <ListItemSecondaryAction className="editicon">
-                    <IconButton edge="end" aria-label="edit" onClick={() => setCount1(count1 + 1)}>
+                    <IconButton edge="end" aria-label="edit" onClick={zeepAdd}>
                         <AddIcon fontSize="large"/>
                     </IconButton>
-                    <IconButton edge="end" aria-label="edit" onClick={() => setCount1(count1 - 1)}>
+                    <IconButton edge="end" aria-label="edit" onClick={zeepRemove}>
                         <RemoveIcon fontSize="large"/>
                     </IconButton>
                     </ListItemSecondaryAction>
@@ -57,10 +86,10 @@ export default function StandardList() {
                     </Typography>
                     </ListItemText>
                     <ListItemSecondaryAction className="editicon">
-                    <IconButton edge="end" aria-label="edit" onClick={() => setCount2(count2 + 1)}>
+                    <IconButton edge="end" aria-label="edit" onClick={strokorrelAdd}>
                         <AddIcon fontSize="large"/>
                     </IconButton>
-                    <IconButton edge="end" aria-label="edit" onClick={() => setCount2(count2 - 1)}>
+                    <IconButton edge="end" aria-label="edit" onClick={strokorrelRemove}>
                         <RemoveIcon fontSize="large"/>
                     </IconButton>
                     </ListItemSecondaryAction>
@@ -77,10 +106,10 @@ export default function StandardList() {
                     </Typography>
                     </ListItemText>
                     <ListItemSecondaryAction className="editicon">
-                    <IconButton edge="end" aria-label="edit" onClick={() => setCount3(count3 + 1)}>
+                    <IconButton edge="end" aria-label="edit" onClick={vogelAdd}>
                         <AddIcon fontSize="large"/>
                     </IconButton>
-                    <IconButton edge="end" aria-label="edit" onClick={() => setCount3(count3 - 1)}>
+                    <IconButton edge="end" aria-label="edit" onClick={vogelRemove}>
                         <RemoveIcon fontSize="large"/>
                     </IconButton>
                     </ListItemSecondaryAction>
