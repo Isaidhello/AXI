@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import { Grid } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   text: {
     flexGrow: 1,
     fontWeight: "bold",
-    paddingTop: theme.spacing(0),
+    paddingTop: "10px",
   },
 }));
 
@@ -28,16 +28,16 @@ export default function ButtonAppBar() {
   return (
     <div className={classes.root}>
       <AppBar color="primary" position="static">
-        <Toolbar className={classes.item}>
-          <Typography align="center" variant="h6" className={classes.text}>
+        <Grid item className={classes.item}>
+          <Typography align="center" variant="h6" className={classes.text} gutterBottom>
             Bestellen
           </Typography>
-        </Toolbar>
-        <Toolbar className={classes.item}>
-          <Typography align="center" variant="subtitle1" className={classes.text}>
+        </Grid>
+        <Grid item className={classes.item}>
+          <Typography align="center" variant="subtitle1">
             Overzicht
           </Typography>
-        </Toolbar>
+        </Grid>
       </AppBar>
     </div>
   );
