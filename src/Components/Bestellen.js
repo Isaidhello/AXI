@@ -3,7 +3,7 @@ import { Grid, Card, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Headerflow from './HeaderFlow';
 import SearchBar from "material-ui-search-bar";
-import ProductList from './components/afprijzen/swipeable/BasicExample';
+import ProductList from './afprijzen/swipeable/BasicExample';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -50,7 +50,7 @@ function Bestellen() {
                 </Grid>
                 {/* List met gescande producten */}
                 <Grid item xs={12} className={classes.productList}>
-                    <ProductList></ProductList>
+                    <ProductList />
                 </Grid>
                 {/* Scan een (volgend) product balk */}
                 <Grid item container xs={12} justify="center" alignItems="center">
