@@ -21,12 +21,10 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   homescreen: {
     width: '100vw',
-    height: '100vh',
-    background: "linear-gradient(135deg, rgba(29,95,192,1) 0%, rgba(28,90,198,1) 100%);",
+    height: '100vh'
   },
   root: {
     flexGrow: 1,
-    background: "linear-gradient(135deg, rgba(29,95,192,1) 0%, rgba(28,90,198,1) 100%);"
   },
   appBar: {
     height: '7%',
@@ -99,7 +97,6 @@ const useStyles = makeStyles((theme) => ({
   content: {
     marginTop: "30%",
   main: {
-    background: "linear-gradient(135deg, rgba(29,95,192,1) 0%, rgba(28,90,198,1) 100%);",
     width: '100vw',
     height: '100vh'
   }}
@@ -137,7 +134,7 @@ const Homepage = () => {
           </Badge></Link>
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={6}><Link to="/schaplabel" style={{textDecoration: "none"}}>
           <Badge badgeContent={4} color="error"  >
             <Card className={classes.card} variant="outlined">
               <CardContent className={classes.content}>
@@ -157,10 +154,10 @@ const Homepage = () => {
                 </Grid>
               </CardContent>
             </Card>
-          </Badge>
+          </Badge></Link>
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={6}><Link to="/voorraad" style={{textDecoration: "none"}}>
           <Card className={classes.card} variant="outlined">
             <CardContent className={classes.content}>
               <Grid container item xs={12} justify="center">
@@ -178,10 +175,10 @@ const Homepage = () => {
                 </Grid>
               </Grid>
             </CardContent>
-          </Card>
+          </Card></Link>
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={6}><Link to="/binnenkomend" style={{textDecoration: "none"}}>
           <Card className={classes.card} variant="outlined">
             <CardContent className={classes.content}>
               <Grid container item xs={12} justify="center">
@@ -199,10 +196,10 @@ const Homepage = () => {
                 </Grid>
               </Grid>
             </CardContent>
-          </Card>
+          </Card></Link>
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={6}><Link to="/afschrijven" style={{textDecoration: "none"}}>
           <Card className={classes.card} variant="outlined">
             <CardContent className={classes.content}>
               <Grid container item xs={12} justify="center">
@@ -220,10 +217,10 @@ const Homepage = () => {
                 </Grid>
               </Grid>
             </CardContent>
-          </Card>
+          </Card></Link>
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={6}><Link to="/afprijzen" style={{textDecoration: "none"}}>
           <Card className={classes.card} variant="outlined">
             <CardContent className={classes.content}>
               <Grid container item xs={12} justify="center">
@@ -241,7 +238,7 @@ const Homepage = () => {
                 </Grid>
               </Grid>
             </CardContent>
-          </Card>
+          </Card></Link>
         </Grid>
 
       </Grid>
