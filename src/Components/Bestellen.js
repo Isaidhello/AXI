@@ -12,6 +12,10 @@ import Divider from '@material-ui/core/Divider';
 import InboxIcon from '@material-ui/icons/Inbox';
 import AddIcon from '@material-ui/icons/Add';
 import DraftsIcon from '@material-ui/icons/Drafts';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import Backdrop from '@material-ui/core/Backdrop';
+import IconButton from '@material-ui/core/IconButton';
+import {useHistory} from 'react-router-dom';
 
 function ListItemLink(props) {
     return <ListItem button component="a" {...props} />;
@@ -39,11 +43,39 @@ const useStyles = makeStyles((theme) => ({
     },
     productList: {
         marginTop: "10px"
+    },
+
+    container: {
+        display: 'grid',
+    },
+    overlay: {
+        backgroundColor: '#1d5fca',
+        zIndex: theme.zIndex.drawer + 1,
+    },
+    item: {
+        color: 'white',
+    },
+    icon: {
+        fontSize: 100,
     }
 }));
 
 function Bestellen() {
     const classes = useStyles();
+
+    const history = useHistory();
+    const [open, setOpen] = React.useState(false);
+    const handleClose = () => {
+        setOpen(false);
+    };
+    const handleToggle = () => {
+        setOpen(!open);
+        setTimeout(() => {
+            console.log(history);
+            history.push("/home")
+          }, 2000)
+    };
+
     return (
         <Grid container className={classes.root} alignItems="flex-start">
             {/* Top bar */}
@@ -98,11 +130,21 @@ function Bestellen() {
                     </Card>
                 </Grid>
 
-                <Fab variant="extended">
+                <Fab variant="extended" onClick={handleToggle}>
                     <AddIcon />
                 Handmatig toevoegen
             </Fab>
             </Grid>
+            <Backdrop className={classes.overlay} open={open} onClick={handleClose}>
+                <div className={classes.container}>
+                    <IconButton className={classes.item} > 
+                        <CheckCircleIcon className={classes.icon} />
+                    </IconButton>
+                    <Typography className={classes.item} align="center">
+                        Lijst succesvol opgestuurd!
+                    </Typography>
+                </div>
+            </Backdrop>
         </Grid>
     )
 }
