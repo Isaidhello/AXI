@@ -2,18 +2,23 @@ import React from 'react';
 import './Homescreen.css';
 import { makeStyles } from '@material-ui/core/styles';
 
-
+import Bestellen from './Components/Bestellen';
 import { BrowserRouter } from 'react-router-dom';
 import { BrowserRouter as Router, Switch, Route, Link }from 'react-router-dom';
 
-import Afprijzen from './components/afprijzen/Afprijzen.js';
-import Homepage from './components/Homepage.js';
-import Header from './components/Header';
-import FABRechtsOnder from './components/afprijzen/FABRechtsOnder';
-import CardsHomeKlein from './components/afprijzen/CardsHomeKlein';
-import ProductInfo from './components/afprijzen/ProductInfo';
-import OwnSearchBar from './components/SearchBar';
-import StandardList from './components/afprijzen/StandardList';
+import Afprijzen from './Components/afprijzen/Afprijzen.js';
+import Homepage from './Components/Homepage.js';
+import Header from './Components/Header';
+import FABRechtsOnder from './Components/afprijzen/FABRechtsOnder';
+import CardsHomeKlein from './Components/afprijzen/CardsHomeKlein';
+import ProductInfo from './Components/afprijzen/ProductInfo';
+import OwnSearchBar from './Components/SearchBar';
+import StandardList from './Components/afprijzen/StandardList';
+import ListBestellen from './Components/ListBestellen';
+import ListBestellen1 from './Components/ListBestellen1';
+import ListBestellen2 from './Components/ListBestellen2';
+import ListBestellen3 from './Components/ListBestellen3';
+
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -59,9 +64,37 @@ function Home() {
                 <ProductInfo />
                 <CardsHomeKlein />
               </Route>
-              <Route exact path="/bestellen" component="">
-                <h1>Bestellen</h1>
+
+              <Route exact path="/bestellen">
+                <OwnSearchBar style={{marginLeft: '-5px'}}/>
+                <br></br><br></br><br></br>
+                <ListBestellen />
+                <FABRechtsOnder />
               </Route>
+
+              <Route exact path="/bestellen1">
+                <OwnSearchBar style={{marginLeft: '-5px'}}/>
+                <br></br><br></br><br></br>
+                <ListBestellen1 />
+                <FABRechtsOnder />
+              </Route>
+
+              <Route exact path="/bestellen2">
+                <OwnSearchBar style={{marginLeft: '-5px'}}/>
+                <br></br><br></br><br></br>
+                <ListBestellen2 />
+                <FABRechtsOnder />
+              </Route>
+
+              <Route exact path="/bestellen3">
+                <OwnSearchBar style={{marginLeft: '-5px'}}/>
+                <br></br><br></br><br></br>
+                <ListBestellen3 />
+                <FABRechtsOnder />
+              </Route>
+
+
+
               <Route exact path="/schaplabel" component="">
                 <h1>Schaplabel</h1>
               </Route>
