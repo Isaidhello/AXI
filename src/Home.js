@@ -2,7 +2,6 @@ import React from 'react';
 import './Homescreen.css';
 import { makeStyles } from '@material-ui/core/styles';
 
-import Bestellen from './Components/Bestellen';
 import { BrowserRouter } from 'react-router-dom';
 import { BrowserRouter as Router, Switch, Route, Link }from 'react-router-dom';
 
@@ -14,10 +13,10 @@ import CardsHomeKlein from './Components/afprijzen/CardsHomeKlein';
 import ProductInfo from './Components/afprijzen/ProductInfo';
 import OwnSearchBar from './Components/SearchBar';
 import StandardList from './Components/afprijzen/StandardList';
-import ListBestellen from './Components/ListBestellen';
-import ListBestellen1 from './Components/ListBestellen1';
-import ListBestellen2 from './Components/ListBestellen2';
-import ListBestellen3 from './Components/ListBestellen3';
+import ListBestellen from './Components/bestellen/ListBestellen';
+import ListBestellen1 from './Components/bestellen/ListBestellen1';
+import ListBestellen2 from './Components/bestellen/ListBestellen2';
+import ListBestellen3 from './Components/bestellen/ListBestellen3';
 
 
 const useStyles = makeStyles((theme) => ({

@@ -8,9 +8,9 @@ import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 
-import Zeep from '../images/zeep.jpg';
-import Strokorrel from '../images/strokorrel.png';
-import Vogel from '../images/vogel.png';
+import Zeep from '../../images/zeep.jpg';
+import Strokorrel from '../../images/strokorrel.png';
+import Vogel from '../../images/vogel.png';
 import { Typography } from '@material-ui/core';
 import TableCell from '@material-ui/core/TableCell';
 
