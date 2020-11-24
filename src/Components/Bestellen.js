@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Card, Typography } from '@material-ui/core';
+import { Grid, Card, Typography, Fab } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Headerflow from './HeaderFlow';
 import SearchBar from "material-ui-search-bar";
@@ -10,6 +10,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import InboxIcon from '@material-ui/icons/Inbox';
+import AddIcon from '@material-ui/icons/Add';
 import DraftsIcon from '@material-ui/icons/Drafts';
 
 function ListItemLink(props) {
@@ -96,6 +97,11 @@ function Bestellen() {
                         </Typography>
                     </Card>
                 </Grid>
+
+                <Fab variant="extended">
+                    <AddIcon />
+                Handmatig toevoegen
+            </Fab>
             </Grid>
         </Grid>
     )
