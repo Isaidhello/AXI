@@ -9,95 +9,18 @@ import { BrowserRouter as Router, Switch, Route, Link }from 'react-router-dom';
 import Afprijzen from './components/afprijzen/Afprijzen.js';
 import Homepage from './components/Homepage.js';
 import Header from './components/Header';
-import ProductList from './components/afprijzen/swipeable/BasicExample';
 import FABRechtsOnder from './components/afprijzen/FABRechtsOnder';
 import CardsHomeKlein from './components/afprijzen/CardsHomeKlein';
 import ProductInfo from './components/afprijzen/ProductInfo';
+import OwnSearchBar from './components/SearchBar';
+import StandardList from './components/afprijzen/StandardList';
 
 const useStyles = makeStyles((theme) => ({
-  homescreen: {
-    width: '100vw',
-    height: '100vh',
-  },
-  root: {
-    flexGrow: 1,
-  },
-  appBar: {
-    height: '7%',
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    color: "#4688D7",
-    height: "100%",
-    top: "15%"
-  },
-  title: {
-    flexGrow: 1,
-    color: "#767676",
-  },
-  subTitle: {
-    flexGrow: 1,
-    color: "#767676",
-  },
-  settingsIcon: {
-    color: "#4688D7",
-    fontSize: "50px",
-  },
-  menuIcon: {
-    fontSize: "40px",
-  },
-  card: {
-    height: "25vh",
-    width: "45vw"
-  },
-  cardsContainer: {
-    marginLeft: "5px",
-    marginRight: "5px"
-  },
-  searchBar: {
-    marginBottom: "10px",
-    height: "150px"
-  },
-  settingsContainer: {
-    height: "100%"
-  },
-  buttonFont: {
-    color: "#4688D7",
-    fontWeight: "bold"
-  },
-  shoppingCartIcon: {
-    color: "#4688D7",
-    fontSize: "60px",
-  },
-  assignmentIcon: {
-    color: "#4688D7",
-    fontSize: "60px",
-  },
-  localShippingIcon: {
-    color: "#4688D7",
-    fontSize: "60px",
-  },
-  deleteForeverIcon: {
-    color: "#4688D7",
-    fontSize: "60px",
-  },
-  euroIcon: {
-    color: "#4688D7",
-    fontSize: "60px",
-  },
-  viewWeekIcon: {
-    color: "#4688D7",
-    fontSize: "60px",
-  },
-  badgeWidth: {
-    width: '100%'
-  },
-  content: {
-    marginTop: "30%",
   main: {
     width: '100vw',
-    height: '100vh'
-  }}
+    height: '100vh',
+    overflow: 'hidden'
+  }
 }));
 
 function Home() {
@@ -120,7 +43,9 @@ function Home() {
                 
               </Route>
               <Route exact path="/afprijzen/korting1">
-                <br></br><br></br><br></br><br></br><ProductList/>
+                <OwnSearchBar style={{marginLeft: '-5px'}}/>
+                <br></br><br></br><br></br>
+                <StandardList />
                 <Link to="/producttoevoegen">Simuleer een product scan</Link>
                 <FABRechtsOnder />
               </Route>

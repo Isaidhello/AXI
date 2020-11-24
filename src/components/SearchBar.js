@@ -97,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
 const OwnSearchBar = () => {
     const classes = useStyles();
     return(
-     <Grid container justify="center" spacing={3} className={classes.cardsContainer}>
+     <Grid container justify="center" className={classes.cardsContainer}>
         <Grid item >
         <SearchBar
             placeholder='Scan of zoek hier een product'

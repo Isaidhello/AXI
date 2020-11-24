@@ -42,7 +42,7 @@ return (
        <Grid container item xs={4} justify="center" >
             <Card className={classes.cardContent}>
                 <Button className={classes.cardContent}>
-                    <Link to="/vanvoorkorting">
+                    <Link to="/vanvoorkorting" style={{textDecoration:'none', color: "#1D5FCA"}}>
                         <CardContent >
                             <Grid item>
                                 <ShoppingCartIcon style={{fontSize: 100,}} color="primary"></ShoppingCartIcon>
@@ -59,7 +59,7 @@ return (
         <Grid container item xs={4} justify="center" >
             <Card className={classes.cardContent}>
                 <Button className={classes.cardContent}>
-                    <Link to="/bedragkorting">
+                    <Link to="/bedragkorting" style={{textDecoration:'none', color: "#1D5FCA"}}>
                         <CardContent >
                             <Grid item>
                                 <ShoppingCartIcon style={{fontSize: 100,}} color="primary"></ShoppingCartIcon>
@@ -76,7 +76,7 @@ return (
         <Grid container item xs={4} justify="center" >
             <Card className={classes.cardContent}>
                 <Button className={classes.cardContent}>
-                    <Link to="/percentagekorting">
+                    <Link to="/percentagekorting" style={{textDecoration:'none', color: "#1D5FCA"}}>
                         <CardContent >
                             <Grid item>
                                 <ShoppingCartIcon style={{fontSize: 100,}} color="primary"></ShoppingCartIcon>
@@ -93,7 +93,7 @@ return (
         <Grid container item xs={4} justify="center" >
             <Card className={classes.cardContent}>
                 <Button className={classes.cardContent}>
-                    <Link to="/staffelkorting">
+                    <Link to="/staffelkorting" style={{textDecoration:'none', color: "#1D5FCA"}}>
                         <CardContent >
                             <Grid item>
                                 <ShoppingCartIcon style={{fontSize: 100,}} color="primary"></ShoppingCartIcon>
@@ -110,7 +110,7 @@ return (
         <Grid container item xs={4} justify="center" >
             <Card className={classes.cardContent}>
                 <Button className={classes.cardContent}>
-                    <Link to="/x+1gratiskorting">
+                    <Link to="/x+1gratiskorting" style={{textDecoration:'none', color: "#1D5FCA"}}>
                         <CardContent >
                             <Grid item>
                                 <ShoppingCartIcon style={{fontSize: 100,}} color="primary"></ShoppingCartIcon>
@@ -127,7 +127,7 @@ return (
         <Grid container item xs={4} justify="center" >
             <Card className={classes.cardContent}>
                 <Button className={classes.cardContent}>
-                    <Link to="xvoorykorting">
+                    <Link to="xvoorykorting" style={{textDecoration:'none', color: "#1D5FCA"}}>
                         <CardContent >
                             <Grid item>
                                 <ShoppingCartIcon style={{fontSize: 100,}} color="primary"></ShoppingCartIcon>

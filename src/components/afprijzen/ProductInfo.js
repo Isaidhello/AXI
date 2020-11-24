@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
       
       margin: theme.spacing(1),
       width:'96%',
-      marginBottom: '0'
+      marginBottom: '0',
+      marginTop: '0'
     },
 
     afb:{
@@ -36,7 +37,7 @@ export default function ProductInfo() {
     direction="column"
     justify="center"
     alignItems="center"
-    style={{marginBottom: 50, backgroundColor: 'white', marginTop: '20px', paddingBottom: '20px'}}
+    style={{marginBottom: 50, backgroundColor: 'white', marginTop: '30px', paddingBottom: '50px'}}
     //spacing={3}
     //style={{ margin: 8 }}
     >
@@ -59,6 +60,7 @@ export default function ProductInfo() {
          > 
          <Typography id="ProductTitel" variant="h4" style={{fontWeight: "bold" }}>Flexa Creations muurverf early dew 1L </Typography> 
         </Grid>
+        <br></br><br></br><br></br>
         
         <Grid 
         container 

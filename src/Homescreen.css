@@ -10,3 +10,41 @@ body {
   overflow: hidden;
   background: linear-gradient(135deg, rgba(29,95,192,1) 0%, rgba(28,90,198,1) 100%);
 }
+
+.listitem {
+  background-color: white;
+  padding: 0!important;
+  margin:0!important;
+  list-style-type: none!important;
+}
+
+.listItemText {
+  padding-left: 2ch!important;
+  border: none!important;
+  outline: none!important;
+}
+
+.cell1 {
+  width: 300px!important;
+  font-size: 26px!important;
+  border-bottom: none;
+  outline: white!important;
+  border: white!important;
+}
+
+.cell2 {
+  width:60px!important;
+  font-size: 26px!important;
+  text-align: right!important;
+  outline: white!important;
+  border: white!important;
+}
+
+.editicon {
+  padding-top:2px;
+  padding-right: 25px;
+}
+
+.listItemAvatar {
+  padding-left:2ch;
+}
