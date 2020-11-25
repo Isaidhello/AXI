@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Card, Typography, Fab } from '@material-ui/core';
+import { Grid, Card, Typography, Fab, CardContent } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Headerflow from './HeaderFlow';
 import SearchBar from "material-ui-search-bar";
@@ -15,7 +15,11 @@ import DraftsIcon from '@material-ui/icons/Drafts';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import Backdrop from '@material-ui/core/Backdrop';
 import IconButton from '@material-ui/core/IconButton';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import RemoveCircleOutlineOutlinedIcon from '@material-ui/icons/RemoveCircleOutlineOutlined';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import TextField from '@material-ui/core/TextField';
+
 
 function ListItemLink(props) {
     return <ListItem button component="a" {...props} />;
@@ -57,7 +61,15 @@ const useStyles = makeStyles((theme) => ({
     },
     icon: {
         fontSize: 100,
-    }
+    },
+    textField: {
+        width: 300,
+        margin: 100,
+    },
+    //style for font size
+    resize: {
+        fontSize: 50
+    },
 }));
 
 function Bestellen() {
@@ -73,7 +85,7 @@ function Bestellen() {
         setTimeout(() => {
             console.log(history);
             history.push("/home")
-          }, 2000)
+        }, 2000)
     };
 
     return (
@@ -132,12 +144,13 @@ function Bestellen() {
 
                 <Fab variant="extended" onClick={handleToggle}>
                     <AddIcon />
-                Handmatig toevoegen
-            </Fab>
+                    Handmatig toevoegen
+                </Fab>
             </Grid>
+
             <Backdrop className={classes.overlay} open={open} onClick={handleClose}>
                 <div className={classes.container}>
-                    <IconButton className={classes.item} > 
+                    <IconButton className={classes.item} >
                         <CheckCircleIcon className={classes.icon} />
                     </IconButton>
                     <Typography className={classes.item} align="center">
@@ -145,6 +158,47 @@ function Bestellen() {
                     </Typography>
                 </div>
             </Backdrop>
+
+            <Card>
+                <CardContent>
+                    <Grid
+                        container
+                        item
+                        justify="center"
+                        alignItems="center"
+                        direction="row">
+
+                        <Grid
+                            item
+                            container
+                            justify="center"
+                            alignItems="center"
+                            xs={4}>
+
+                            <RemoveCircleOutlineOutlinedIcon style={{ fontSize: 100 }} color='secondary'  ></RemoveCircleOutlineOutlinedIcon>
+
+                        </Grid>
+
+                        <Grid
+                            item
+                            container
+                            justify="center"
+                            alignItems="center"
+                            xs={2}>
+                            <TextField maxValue='3' type='number' id="outlined-basic" InputProps={{ style: { fontSize: 40 } }} variant="outlined" />
+                        </Grid>
+
+                        <Grid
+                            item
+                            container
+                            justify="center"
+                            alignItems="center"
+                            xs={4}>
+                            <AddCircleIcon style={{ fontSize: 100 }} color='secondary'></AddCircleIcon>
+                        </Grid>
+                    </Grid>
+                </CardContent>
+            </Card>
         </Grid>
     )
 }
