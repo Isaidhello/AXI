@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Verf from '../../images/zeep.jpg'; 
+import Verf from '../../images/vogel.png'; 
 
 
 
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ProductInfo() {
+export default function ProductInfoKlein() {
   const classes = useStyles();
 
   return (
@@ -48,8 +48,9 @@ export default function ProductInfo() {
         alignItems="center"
         xs={12} 
          > 
-        <img id="ProductImg" style={{height: 450, marginBottom: 10}} src={Verf} alt='Foto van Flexa verf'></img>
+        <img id="ProductImg" style={{height: 200, marginBottom: 30, marginTop: 50}} src={Verf} alt='Foto van Flexa verf'></img>
         </Grid>
+        <br></br>
 
         <Grid 
         item 
@@ -58,9 +59,8 @@ export default function ProductInfo() {
         alignItems="center"
         xs={12} //Titeltext
          > 
-         <Typography id="ProductTitel" variant="h4" style={{fontWeight: "bold" }}>Flexa Creations muurverf early dew 1L </Typography> 
-        </Grid>
-        <br></br><br></br><br></br>
+         <Typography id="ProductTitel" variant="h5" style={{fontWeight: "bold" }}>Flexa Creations muurverf early dew 1L </Typography> 
+        </Grid><br></br><br></br>
         
         <Grid 
         container 
@@ -78,10 +78,10 @@ export default function ProductInfo() {
             alignItems="flex-start"
             xs={2}> 
                 <Grid item xs={12}>
-                    <Typography  variant="h5" style={{fontWeight: "bold" }} >Voorraad:</Typography>
+                    <Typography  variant="h6" style={{fontWeight: "bold" }} >Voorraad:</Typography>
                 </Grid>
                 <Grid item>
-                    <Typography id="ProductVoorraad" variant="h5">21 Stuks</Typography>
+                    <Typography id="ProductVoorraad" variant="h6">21 Stuks</Typography>
                 </Grid>   
              </Grid>
 
@@ -93,10 +93,10 @@ export default function ProductInfo() {
             alignItems="flex-start"
             xs={2}> 
                 <Grid item xs={12}>
-                    <Typography variant="h5" style={{fontWeight: "bold" }}>Nummer:</Typography>
+                    <Typography variant="h6" style={{fontWeight: "bold" }}>Nummer:</Typography>
                 </Grid>
                 <Grid item>
-                    <Typography id="ProductNummer" variant="h5">345678</Typography>
+                    <Typography id="ProductNummer" variant="h6">345678</Typography>
                 </Grid>   
              </Grid>
 
@@ -108,10 +108,10 @@ export default function ProductInfo() {
             alignItems="flex-start"
             xs={2}> 
                 <Grid item xs={12}>
-                    <Typography variant="h5" style={{fontWeight: "bold" }}>Prijs:</Typography>
+                    <Typography variant="h6" style={{fontWeight: "bold" }}>Prijs:</Typography>
                 </Grid>
                 <Grid item>
-                    <Typography id="ProductPrijs" variant="h5">24,99</Typography>
+                    <Typography id="ProductPrijs" variant="h6">24,99</Typography>
                 </Grid>   
              </Grid>
 
@@ -123,10 +123,10 @@ export default function ProductInfo() {
             alignItems="flex-start"
             xs={2}> 
                 <Grid item xs={12}>
-                    <Typography variant="h5" style={{fontWeight: "bold" }}>Promotie:</Typography>
+                    <Typography variant="h6" style={{fontWeight: "bold" }}>Promotie:</Typography>
                 </Grid>
                 <Grid item>
-                    <Typography id="ProductPromotie" variant="h5">Geen</Typography>
+                    <Typography id="ProductPromotie" variant="h6">Geen</Typography>
                 </Grid>   
              </Grid>
 
