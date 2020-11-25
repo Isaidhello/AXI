@@ -3,7 +3,7 @@ import './Homescreen.css';
 import { makeStyles } from '@material-ui/core/styles';
 
 import { BrowserRouter } from 'react-router-dom';
-import { BrowserRouter as Router, Switch, Route, Link }from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Afprijzen from './Components/afprijzen/Afprijzen.js';
 import Homepage from './Components/Homepage.js';
@@ -31,17 +31,28 @@ function Home() {
   const classes = useStyles();
   return (
 
-    
-    <div className={classes.main}>
-    <BrowserRouter>
-        
 
-      <Header />
+    <div className={classes.main}>
+      <BrowserRouter>
+
+
+        <Header />
 
         <Router>
-            <Switch>
-              <Route exact path="/home" component={Homepage}>
+          <Switch>
+            <Route exact path="/home" component={Homepage}>
 
+            </Route>
+            <Route exact path="/afprijzen" component={Afprijzen}>
+
+            </Route>
+            <Route exact path="/afprijzen/korting1">
+              <br></br><br></br><br></br><br></br><ProductList />
+              <Link to="/producttoevoegen">Simuleer een product scan</Link>
+              <FABRechtsOnder />
+            </Route>
+            <Route exact path="/afprijzen/korting2">
+              korting 2
               </Route>
               <Route exact path="/afprijzen" component={Afprijzen}>
                 
@@ -103,14 +114,30 @@ function Home() {
               <Route exact path="/afschrijven" component="">
                 <h1>Afschrijven</h1>
               </Route>
-              <Route exact path="/binnenkomend" component="">
+            <Route exact path="/producttoevoegen">
+              <ProductInfo />
+              <CardsHomeKlein />
+            </Route>
+            <Route exact path="/bestellen" component="">
+              <h1>Bestellen</h1>
+            </Route>
+            <Route exact path="/schaplabel" component="">
+              <h1>Schaplabel</h1>
+            </Route>
+            <Route exact path="/voorraad" component="">
+              <h1>Voorraad</h1>
+            </Route>
+            <Route exact path="/afschrijven" component="">
+              <h1>Afschrijven</h1>
+            </Route>
+            <Route exact path="/binnenkomend" component="">
               <h1>Binnenkomend</h1>
-              </Route>
-            </Switch>
-          </Router>
-    
+            </Route>
+          </Switch>
+        </Router>
 
-          </BrowserRouter>
+
+      </BrowserRouter>
     </div>
   );
 }
