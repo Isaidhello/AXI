@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Home from './Home';
-import Bestellen from './Components/Bestellen';
 import reportWebVitals from './reportWebVitals';
 import Theme from './Theme';
 import { ThemeProvider } from '@material-ui/core/styles';
@@ -12,7 +11,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={Theme}>
-      <Bestellen />
+      <Home />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

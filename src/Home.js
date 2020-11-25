@@ -47,7 +47,7 @@ function Home() {
 
             </Route>
             <Route exact path="/afprijzen/korting1">
-              <br></br><br></br><br></br><br></br><ProductList />
+              <br></br><br></br><br></br><br></br><StandardList />
               <Link to="/producttoevoegen">Simuleer een product scan</Link>
               <FABRechtsOnder />
             </Route>
