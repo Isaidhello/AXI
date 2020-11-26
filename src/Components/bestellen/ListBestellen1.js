@@ -88,7 +88,7 @@ export default function ListBestellen1() {
                     <ListItemText className="listItemText">
                         <Typography variant="h5">
                             <TableCell className="cell1">Aloe Vera Zeep</TableCell>
-                            <TableCell className="cell2">1 st</TableCell>
+                            <TableCell className="cell2">{count1} st</TableCell>
                         </Typography>
                     </ListItemText>
                 </ListItem>
