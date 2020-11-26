@@ -46,18 +46,18 @@ export default function HeaderFlow() {
     <div className={classes.root}>
       <AppBar color="primary" position="static" className={classes.appBar}>
         <Grid container className={classes.margin}> <Link to="/home" className={classes.arrowBackIcon} >
-         <Grid item xs= {2}>
-        <ArrowBackIcon className={classes.arrowBackIcon} />
-        </Grid></Link>
-        <Grid item xs={8} className={classes.item}>
-        
-          <Typography align="center" variant="h4" className={classes.text} gutterBottom>
-           Bestellen
+          <Grid item xs={2}>
+            <ArrowBackIcon className={classes.arrowBackIcon} />
+          </Grid></Link>
+          <Grid item xs={10} className={classes.item}>
+
+            <Typography align="center" variant="h4" className={classes.text} gutterBottom>
+              Bestellen
            <Typography align="center" variant="h6">
-            Overzicht
+                Overzicht
           </Typography>
-          </Typography>
-        </Grid>
+            </Typography>
+          </Grid>
         </Grid>
       </AppBar>
     </div>

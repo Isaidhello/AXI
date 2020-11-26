@@ -51,6 +51,9 @@ export default function ListBestellen2() {
             background: 'grey',
             height: '1px',
         },
+        contentCount: {
+            paddingTop: "45px"
+        }
     }));
     const [count1, setCount1] = useState(Number(localStorage.getItem('count1')));
     const [count2, setCount2] = useState(Number(localStorage.getItem('count2')));
@@ -273,7 +276,7 @@ export default function ListBestellen2() {
                 <Grid item>
                     <Slide direction="up" in={checked1} mountOnEnter unmountOnExit>
                         <Card className={classes.countCard}>
-                            <CardContent>
+                            <CardContent className={classes.contentCount}>
                                 <Grid container item justify="center" alignItems="center" direction="row">
                                     <Grid item container justify="center" alignItems="center" xs={4}>
                                         <RemoveCircleOutlineOutlinedIcon style={{ fontSize: 100 }} color='secondary' onClick={zeepRemove} />
@@ -295,7 +298,7 @@ export default function ListBestellen2() {
                 <Grid item>
                     <Slide direction="up" in={checked2} mountOnEnter unmountOnExit>
                         <Card className={classes.countCard}>
-                            <CardContent>
+                            <CardContent className={classes.contentCount}>
                                 <Grid container item justify="center" alignItems="center" direction="row">
                                     <Grid item container justify="center" alignItems="center" xs={4}>
                                         <RemoveCircleOutlineOutlinedIcon style={{ fontSize: 100 }} color='secondary' onClick={strokorrelRemove} />
