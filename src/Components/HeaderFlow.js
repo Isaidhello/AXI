@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import { Grid } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,6 +30,7 @@ export default function HeaderFlow() {
     <div className={classes.root}>
       <AppBar color="primary" position="static">
         <Grid item className={classes.item}>
+          <ArrowBackIcon />
           <Typography align="center" variant="h6" className={classes.text} gutterBottom>
             Bestellen
           </Typography>

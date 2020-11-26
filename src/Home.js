@@ -39,10 +39,6 @@ function Home() {
 
     <div className={classes.main}>
       <BrowserRouter>
-
-
-        
-
         <Router>
           <Switch>
             <Route exact path="/home" component={Homepage}>
