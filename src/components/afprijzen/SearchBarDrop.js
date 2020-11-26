@@ -2,7 +2,6 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
 
 const useStyles = makeStyles((theme) => ({
     cardsContainer: {
@@ -31,22 +30,7 @@ const OwnSearchBarDrop = () => {
     return(
      <Grid container justify="center" className={classes.cardsContainer}>
         <Grid item >
-        <Autocomplete
-          freeSolo
-          id="free-solo-2-demo"
-          className={classes.dropdown}
-          disableClearable
-          options={products.map((option) => option.title)}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              label="Scan of zoek hier een product"
-              margin="normal"
-              variant="outlined"
-              InputProps={{ ...params.InputProps, type: 'search' }}
-            />
-          )}
-        />
+
         </Grid>
     </Grid>
     )

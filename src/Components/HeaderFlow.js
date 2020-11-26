@@ -4,6 +4,8 @@ import AppBar from '@material-ui/core/AppBar';
 import { Grid } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,6 +23,18 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     paddingTop: "10px",
   },
+  arrowBackIcon: {
+    color: "#ffffff",
+    fontSize: "60px",
+    marginTop: "10%",
+  },
+  appBar: {
+    height: '7vh',
+    paddingBottom: '10px'
+  },
+  margin: {
+    marginTop: "0%"
+  }
 }));
 
 export default function HeaderFlow() {
@@ -28,17 +42,20 @@ export default function HeaderFlow() {
 
   return (
     <div className={classes.root}>
-      <AppBar color="primary" position="static">
-        <Grid item className={classes.item}>
-          {/* <ArrowBackIcon onClick={this.context.router.history.goBack} /> */}
-          <Typography align="center" variant="h6" className={classes.text} gutterBottom>
-            Bestellen
-          </Typography>
+      <AppBar color="primary" position="static" className={classes.appBar}>
+        <Grid container className={classes.margin}>
+        <Grid item xs= {2}>
+        <ArrowBackIcon className={classes.arrowBackIcon} />
         </Grid>
-        <Grid item className={classes.item}>
-          <Typography align="center" variant="subtitle1">
+        <Grid item xs={8} className={classes.item}>
+        
+          <Typography align="center" variant="h4" className={classes.text} gutterBottom>
+           Bestellen
+           <Typography align="center" variant="h6">
             Overzicht
           </Typography>
+          </Typography>
+        </Grid>
         </Grid>
       </AppBar>
     </div>
