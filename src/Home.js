@@ -29,6 +29,10 @@ const useStyles = makeStyles((theme) => ({
     width: '100vw',
     height: '100vh',
     overflow: 'hidden'
+  },
+  root: {
+    height: '100vh',
+    backgroundColor: 'white'
   }
 }));
 

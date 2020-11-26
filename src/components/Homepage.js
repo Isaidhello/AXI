@@ -21,7 +21,8 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   homescreen: {
     width: '100vw',
-    height: '100vh'
+    height: '100vh',
+    background: 'linear-gradient(135deg, rgba(29,95,192,1) 0%, rgba(28,90,198,1) 100%)'
   },
   root: {
     flexGrow: 1,
