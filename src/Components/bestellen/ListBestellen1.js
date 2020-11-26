@@ -12,9 +12,17 @@ import TableCell from '@material-ui/core/TableCell';
 
 import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid'
 import Switch from '@material-ui/core/Switch';
 import Slide from '@material-ui/core/Slide';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import RemoveCircleOutlineOutlinedIcon from '@material-ui/icons/RemoveCircleOutlineOutlined';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 const useStyles = makeStyles((theme) => ({
     divider: {
