@@ -13,16 +13,12 @@ import TableCell from '@material-ui/core/TableCell';
 import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid'
-import Switch from '@material-ui/core/Switch';
 import Slide from '@material-ui/core/Slide';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import RemoveCircleOutlineOutlinedIcon from '@material-ui/icons/RemoveCircleOutlineOutlined';
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 
 
@@ -55,7 +51,6 @@ export default function ListBestellen1() {
         },
     }));
     const [count1, setCount1] = useState(Number(localStorage.getItem('count1')));
-    const [count, setCount] = useState(Number(localStorage.getItem('count')));
 
     // Slide gedeelte 
     const [checked, setChecked] = React.useState(false);
@@ -64,14 +59,14 @@ export default function ListBestellen1() {
     };
 
     function zeepAdd() {
-        setCount(count + 1);
-        localStorage.setItem('count', (count + 1));
+        setCount1(count1 + 1);
+        localStorage.setItem('count1', (count1 + 1));
     };
 
     function zeepRemove() {
-        if (count > 0) {
-            setCount(count - 1);
-            localStorage.setItem('count', (count - 1));
+        if (count1 > 0) {
+            setCount1(count1 - 1);
+            localStorage.setItem('count1', (count1 - 1));
         }
         else {
             return (null);
@@ -89,7 +84,7 @@ export default function ListBestellen1() {
                     <ListItemText className="listItemText">
                         <Typography variant="h5">
                             <TableCell className="cell1">Aloe Vera Zeep</TableCell>
-                            <TableCell className="cell2">{count} st</TableCell>
+                            <TableCell className="cell2">{count1} st</TableCell>
                         </Typography>
                     </ListItemText>
                 </ListItem>
@@ -254,44 +249,14 @@ export default function ListBestellen1() {
                     <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
                         <Card className={classes.countCard}>
                             <CardContent>
-                                <Grid
-                                    container
-                                    item
-                                    justify="center"
-                                    alignItems="center"
-                                    direction="row">
-
-                                    {/* Remove knop */}
-                                    <Grid
-                                        item
-                                        container
-                                        justify="center"
-                                        alignItems="center"
-                                        xs={4}>
-
+                                <Grid container item justify="center" alignItems="center" direction="row">
+                                    <Grid item container justify="center" alignItems="center" xs={4}>
                                         <RemoveCircleOutlineOutlinedIcon style={{ fontSize: 100 }} color='secondary' onClick={zeepRemove} />
-
                                     </Grid>
-
-                                    {/* Getal midden */}
-                                    <Grid
-                                        item
-                                        container
-                                        justify="center"
-                                        alignItems="center"
-                                        xs={2}>
-                                        <TextField maxValue='3' type='number' id="outlined-basic" InputProps={{ style: { fontSize: 40 } }} variant="outlined"
-                                            value={count}
-                                        />
+                                    <Grid item container justify="center" alignItems="center" xs={2}>
+                                        <TextField maxValue='3' type='number' id="outlined-basic" InputProps={{ style: { fontSize: 40 } }} variant="outlined" value={count1} />
                                     </Grid>
-
-                                    {/* Add knop */}
-                                    <Grid
-                                        item
-                                        container
-                                        justify="center"
-                                        alignItems="center"
-                                        xs={4}>
+                                    <Grid item container justify="center" alignItems="center" xs={4}>
                                         <AddCircleIcon style={{ fontSize: 100 }} color='secondary' onClick={zeepAdd} />
                                     </Grid>
                                 </Grid>
@@ -300,7 +265,7 @@ export default function ListBestellen1() {
                     </Slide>
                 </Grid>
             </Grid>
-        </div >
+        </div>
 
     )
 }
