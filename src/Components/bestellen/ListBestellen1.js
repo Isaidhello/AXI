@@ -14,7 +14,7 @@ import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
 import Switch from '@material-ui/core/Switch';
 import Slide from '@material-ui/core/Slide';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+
 
 const useStyles = makeStyles((theme) => ({
     divider: {
@@ -152,6 +152,58 @@ export default function ListBestellen1() {
                 <Divider classes={{ root: classes.divider }} />
 
             </List>
+
+            <Grid item container justify="center" direction="row-reverse" xs={12}>
+                <Grid item>
+                    <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
+                        <Card className={classes.countCard}>
+                            <CardContent>
+                                <Grid
+                                    container
+                                    item
+                                    justify="center"
+                                    alignItems="center"
+                                    direction="row">
+
+                                    {/* Remove knop */}
+                                    <Grid
+                                        item
+                                        container
+                                        justify="center"
+                                        alignItems="center"
+                                        xs={4}>
+
+                                        <RemoveCircleOutlineOutlinedIcon style={{ fontSize: 100 }} color='secondary' onClick={zeepRemove} />
+
+                                    </Grid>
+
+                                    {/* Getal midden */}
+                                    <Grid
+                                        item
+                                        container
+                                        justify="center"
+                                        alignItems="center"
+                                        xs={2}>
+                                        <TextField maxValue='3' type='number' id="outlined-basic" InputProps={{ style: { fontSize: 40 } }} variant="outlined"
+                                            value={count1}
+                                        />
+                                    </Grid>
+
+                                    {/* Add knop */}
+                                    <Grid
+                                        item
+                                        container
+                                        justify="center"
+                                        alignItems="center"
+                                        xs={4}>
+                                        <AddCircleIcon style={{ fontSize: 100 }} color='secondary' onClick={zeepAdd} />
+                                    </Grid>
+                                </Grid>
+                            </CardContent>
+                        </Card>
+                    </Slide>
+                </Grid>
+            </Grid>
         </div>
 
     )
