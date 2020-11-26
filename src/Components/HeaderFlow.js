@@ -30,7 +30,7 @@ export default function HeaderFlow() {
     <div className={classes.root}>
       <AppBar color="primary" position="static">
         <Grid item className={classes.item}>
-          <ArrowBackIcon />
+          <ArrowBackIcon onClick={this.context.router.history.goBack} />
           <Typography align="center" variant="h6" className={classes.text} gutterBottom>
             Bestellen
           </Typography>
