@@ -1,10 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import SearchBar from "material-ui-search-bar";
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import { Link } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     cardsContainer: {
@@ -29,17 +27,6 @@ const useStyles = makeStyles((theme) => ({
 
 const OwnSearchBarDrop = () => {
     const classes = useStyles();
-
-    const defaultProps = {
-      options: products,
-      getOptionLabel: (option) => option.title,
-    };
-  
-    const flatProps = {
-      options: products.map((option) => option.title),
-    };
-  
-    const [value, setValue] = React.useState(null);
 
     return(
      <Grid container justify="center" className={classes.cardsContainer}>
