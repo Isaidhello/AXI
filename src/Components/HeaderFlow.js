@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from 'react-router-dom';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   arrowBackIcon: {
     color: "#ffffff",
     fontSize: "60px",
-    marginTop: "10%",
+    marginTop: "1%",
   },
   appBar: {
     height: '7vh',
@@ -43,10 +45,10 @@ export default function HeaderFlow() {
   return (
     <div className={classes.root}>
       <AppBar color="primary" position="static" className={classes.appBar}>
-        <Grid container className={classes.margin}>
-        <Grid item xs= {2}>
+        <Grid container className={classes.margin}> <Link to="/home" className={classes.arrowBackIcon} >
+         <Grid item xs= {2}>
         <ArrowBackIcon className={classes.arrowBackIcon} />
-        </Grid>
+        </Grid></Link>
         <Grid item xs={8} className={classes.item}>
         
           <Typography align="center" variant="h4" className={classes.text} gutterBottom>
