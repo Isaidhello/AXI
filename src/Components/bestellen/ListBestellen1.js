@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
@@ -24,14 +24,6 @@ import Button from '@material-ui/core/Button';
 
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
-const useStyles = makeStyles((theme) => ({
-    divider: {
-        // Theme Color, or use css color in quote
-        background: 'grey',
-        height: '3px'
-    },
-}));
-
 
 
 export default function ListBestellen1() {
@@ -56,7 +48,11 @@ export default function ListBestellen1() {
         },
         countCard: {
             maxWidth: "500px",
-        }
+        },
+        divider: {
+            background: 'grey',
+            height: '2px',
+        },
     }));
     const [count1, setCount1] = useState(Number(localStorage.getItem('count1')));
 
@@ -85,7 +81,7 @@ export default function ListBestellen1() {
     return (
         <div>
             <List>
-                <ListItem className="listitem">
+                <ListItem className="listitem" checked={checked} onClick={handleChange}>
                     <ListItemAvatar className="listItemAvatar">
                         <img src={Zeep} alt="not found" width="60" height="60" />
                     </ListItemAvatar>
@@ -96,7 +92,7 @@ export default function ListBestellen1() {
                         </Typography>
                     </ListItemText>
                 </ListItem>
-                <Divider classes={{ root: classes.divider }} />
+                <Divider className={classes.divider} />
 
                 <ListItem className="listitem">
                     <Link to="/bestellen2" style={{ textDecoration: 'none', color: 'black' }}>
@@ -256,7 +252,7 @@ export default function ListBestellen1() {
                     </Slide>
                 </Grid>
             </Grid>
-        </div>
+        </div >
 
     )
 }
