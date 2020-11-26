@@ -51,10 +51,11 @@ export default function ListBestellen1() {
         },
         divider: {
             background: 'grey',
-            height: '2px',
+            height: '1px',
         },
     }));
     const [count1, setCount1] = useState(Number(localStorage.getItem('count1')));
+    const [count, setCount] = useState(Number(localStorage.getItem('count')));
 
     // Slide gedeelte 
     const [checked, setChecked] = React.useState(false);
@@ -63,14 +64,14 @@ export default function ListBestellen1() {
     };
 
     function zeepAdd() {
-        setCount1(count1 + 1);
-        localStorage.setItem('count1', (count1 + 1));
+        setCount(count + 1);
+        localStorage.setItem('count', (count + 1));
     };
 
     function zeepRemove() {
-        if (count1 > 0) {
-            setCount1(count1 - 1);
-            localStorage.setItem('count1', (count1 - 1));
+        if (count > 0) {
+            setCount(count - 1);
+            localStorage.setItem('count', (count - 1));
         }
         else {
             return (null);
@@ -81,14 +82,14 @@ export default function ListBestellen1() {
     return (
         <div>
             <List>
-                <ListItem className="listitem" checked={checked} onClick={handleChange}>
+                <ListItem className="listitem" checked={checked} onClick={handleChange} >
                     <ListItemAvatar className="listItemAvatar">
                         <img src={Zeep} alt="not found" width="60" height="60" />
                     </ListItemAvatar>
                     <ListItemText className="listItemText">
                         <Typography variant="h5">
                             <TableCell className="cell1">Aloe Vera Zeep</TableCell>
-                            <TableCell className="cell2">{count1} st</TableCell>
+                            <TableCell className="cell2">{count} st</TableCell>
                         </Typography>
                     </ListItemText>
                 </ListItem>
@@ -199,6 +200,53 @@ export default function ListBestellen1() {
                 </ListItem>
                 <Divider classes={{ root: classes.divider }} />
 
+                <ListItem className="listitem">
+                    <ListItemAvatar className="listItemAvatar">
+
+                    </ListItemAvatar>
+                    <ListItemText className="listItemText">
+                        <Typography variant="h5">
+                            <TableCell className="cell1">&nbsp;</TableCell>
+                            <TableCell className="cell2"></TableCell>
+                        </Typography>
+                    </ListItemText>
+                    <ListItemSecondaryAction className="editicon">
+                    </ListItemSecondaryAction>
+                </ListItem>
+                <Divider classes={{ root: classes.divider }} />
+
+                <ListItem className="listitem">
+                    <ListItemAvatar className="listItemAvatar">
+
+                    </ListItemAvatar>
+                    <ListItemText className="listItemText">
+                        <Typography variant="h5">
+                            <TableCell className="cell1">&nbsp;</TableCell>
+                            <TableCell className="cell2"></TableCell>
+                        </Typography>
+                    </ListItemText>
+                    <ListItemSecondaryAction className="editicon">
+                    </ListItemSecondaryAction>
+                </ListItem>
+                <Divider classes={{ root: classes.divider }} />
+
+                <ListItem className="listitem">
+                    <ListItemAvatar className="listItemAvatar">
+
+                    </ListItemAvatar>
+                    <ListItemText className="listItemText">
+                        <Typography variant="h5">
+                            <TableCell className="cell1">&nbsp;</TableCell>
+                            <TableCell className="cell2"></TableCell>
+                        </Typography>
+                    </ListItemText>
+                    <ListItemSecondaryAction className="editicon">
+                    </ListItemSecondaryAction>
+                </ListItem>
+                <Divider classes={{ root: classes.divider }} />
+
+
+
             </List>
 
             <Grid item container justify="center" direction="row-reverse" xs={12}>
@@ -233,7 +281,7 @@ export default function ListBestellen1() {
                                         alignItems="center"
                                         xs={2}>
                                         <TextField maxValue='3' type='number' id="outlined-basic" InputProps={{ style: { fontSize: 40 } }} variant="outlined"
-                                            value={count1}
+                                            value={count}
                                         />
                                     </Grid>
 
