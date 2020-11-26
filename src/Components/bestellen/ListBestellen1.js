@@ -12,6 +12,9 @@ import TableCell from '@material-ui/core/TableCell';
 
 import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
+import Switch from '@material-ui/core/Switch';
+import Slide from '@material-ui/core/Slide';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 const useStyles = makeStyles((theme) => ({
     divider: {
@@ -19,11 +22,7 @@ const useStyles = makeStyles((theme) => ({
         background: 'grey',
         height: '3px'
     },
-  }));
-
-import Switch from '@material-ui/core/Switch';
-import Slide from '@material-ui/core/Slide';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+}));
 
 
 
@@ -36,121 +35,121 @@ export default function ListBestellen1() {
             <List>
                 <ListItem className="listitem">
                     <ListItemAvatar className="listItemAvatar">
-                        <img src={Zeep} alt="not found" width="60" height="60"/>
+                        <img src={Zeep} alt="not found" width="60" height="60" />
                     </ListItemAvatar>
                     <ListItemText className="listItemText">
-                    <Typography variant="h5">
+                        <Typography variant="h5">
                             <TableCell className="cell1">Aloe Vera Zeep</TableCell>
                             <TableCell className="cell2">1 st</TableCell>
-                    </Typography>
+                        </Typography>
                     </ListItemText>
                 </ListItem>
-                <Divider classes={{root: classes.divider}} />
+                <Divider classes={{ root: classes.divider }} />
 
                 <ListItem className="listitem">
-                    <Link to="/bestellen2" style={{textDecoration:'none', color: 'black'}}>
-                    <ListItemAvatar className="listItemAvatar">
-                        
-                    </ListItemAvatar>
-                    <ListItemText className="listItemText">
-                    <Typography variant="h5">
-                            <TableCell className="cell1">&nbsp;</TableCell>
-                            <TableCell className="cell2"></TableCell>
-                    </Typography>
-                    </ListItemText>
+                    <Link to="/bestellen2" style={{ textDecoration: 'none', color: 'black' }}>
+                        <ListItemAvatar className="listItemAvatar">
+
+                        </ListItemAvatar>
+                        <ListItemText className="listItemText">
+                            <Typography variant="h5">
+                                <TableCell className="cell1">&nbsp;</TableCell>
+                                <TableCell className="cell2"></TableCell>
+                            </Typography>
+                        </ListItemText>
                     </Link>
                 </ListItem>
-                <Divider classes={{root: classes.divider}} />
+                <Divider classes={{ root: classes.divider }} />
 
                 <ListItem className="listitem">
                     <ListItemAvatar className="listItemAvatar">
-                        
+
                     </ListItemAvatar>
                     <ListItemText className="listItemText">
-                    <Typography variant="h5">
+                        <Typography variant="h5">
                             <TableCell className="cell1">&nbsp;</TableCell>
                             <TableCell className="cell2"></TableCell>
-                    </Typography>
+                        </Typography>
                     </ListItemText>
                     <ListItemSecondaryAction className="editicon">
                     </ListItemSecondaryAction>
                 </ListItem>
-                <Divider classes={{root: classes.divider}} />
+                <Divider classes={{ root: classes.divider }} />
 
                 <ListItem className="listitem">
                     <ListItemAvatar className="listItemAvatar">
-                        
+
                     </ListItemAvatar>
                     <ListItemText className="listItemText">
-                    <Typography variant="h5">
+                        <Typography variant="h5">
                             <TableCell className="cell1">&nbsp;</TableCell>
                             <TableCell className="cell2"></TableCell>
-                    </Typography>
+                        </Typography>
                     </ListItemText>
                     <ListItemSecondaryAction className="editicon">
                     </ListItemSecondaryAction>
                 </ListItem>
-                <Divider classes={{root: classes.divider}} />
+                <Divider classes={{ root: classes.divider }} />
 
                 <ListItem className="listitem">
                     <ListItemAvatar className="listItemAvatar">
-                        
+
                     </ListItemAvatar>
                     <ListItemText className="listItemText">
-                    <Typography variant="h5">
+                        <Typography variant="h5">
                             <TableCell className="cell1">&nbsp;</TableCell>
                             <TableCell className="cell2"></TableCell>
-                    </Typography>
+                        </Typography>
                     </ListItemText>
                     <ListItemSecondaryAction className="editicon">
                     </ListItemSecondaryAction>
                 </ListItem>
-                <Divider classes={{root: classes.divider}} />
+                <Divider classes={{ root: classes.divider }} />
 
                 <ListItem className="listitem">
                     <ListItemAvatar className="listItemAvatar">
-                        
+
                     </ListItemAvatar>
                     <ListItemText className="listItemText">
-                    <Typography variant="h5">
+                        <Typography variant="h5">
                             <TableCell className="cell1">&nbsp;</TableCell>
                             <TableCell className="cell2"></TableCell>
-                    </Typography>
+                        </Typography>
                     </ListItemText>
                     <ListItemSecondaryAction className="editicon">
                     </ListItemSecondaryAction>
                 </ListItem>
-                <Divider classes={{root: classes.divider}} />
+                <Divider classes={{ root: classes.divider }} />
 
                 <ListItem className="listitem">
                     <ListItemAvatar className="listItemAvatar">
-                        
+
                     </ListItemAvatar>
                     <ListItemText className="listItemText">
-                    <Typography variant="h5">
+                        <Typography variant="h5">
                             <TableCell className="cell1">&nbsp;</TableCell>
                             <TableCell className="cell2"></TableCell>
-                    </Typography>
+                        </Typography>
                     </ListItemText>
                     <ListItemSecondaryAction className="editicon">
                     </ListItemSecondaryAction>
                 </ListItem>
-                <Divider classes={{root: classes.divider}} />
+                <Divider classes={{ root: classes.divider }} />
 
                 <ListItem className="listitem">
                     <ListItemAvatar className="listItemAvatar">
-                        
+
                     </ListItemAvatar>
                     <ListItemText className="listItemText">
-                    <Typography variant="h5">
+                        <Typography variant="h5">
                             <TableCell className="cell1">&nbsp;</TableCell>
                             <TableCell className="cell2"></TableCell>
-                    </Typography>
+                        </Typography>
                     </ListItemText>
                     <ListItemSecondaryAction className="editicon">
                     </ListItemSecondaryAction>
                 </ListItem>
-                <Divider classes={{root: classes.divider}} />
+                <Divider classes={{ root: classes.divider }} />
 
             </List>
         </div>
