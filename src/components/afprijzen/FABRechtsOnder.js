@@ -46,31 +46,32 @@ export default function FABRechtsOnder() {
     <div className={classes.root} >
       <Fab className={classes.item} aria-label="add" color="secondary" onClick={handleClickOpen}>
         <DoneIcon className={classes.arrow} fontSize='inherit' />
-
-        <Dialog
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description"
-        >
-          <DialogTitle id="alert-dialog-title">{"Weet je zeker dat je lijst wilt opsturen?"}</DialogTitle>
-          <DialogContent>
-            <DialogContentText id="alert-dialog-description">
-              Als je op bevestigen drukt wordt de lijst opgestuurd. Dit kan niet ongedaan worden.
-          </DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleClose} color="primary" >
-              Annuleren
-          </Button>
-            <Link to='/home'>
-              <Button onClick={handleClose} color="primary" autoFocus>
-                Bevestigen
-              </Button>
-            </Link>
-          </DialogActions>
-        </Dialog>
       </Fab>
+        <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">{"Weet je zeker dat je lijst wilt opsturen?"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+          Als je op bevestigen drukt wordt de lijst opgestuurd. Dit kan niet ongedaan worden.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+          Annuleren
+          </Button>
+          <Link to='/home'>
+          <Button onClick={handleClose} color="primary" autoFocus>
+          Bevestigen
+          </Button>
+          </Link>
+        </DialogActions>
+      </Dialog>
+      
+
     </div>
   );
 }
