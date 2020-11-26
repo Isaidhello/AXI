@@ -45,6 +45,7 @@ export default function ListBestellen2() {
         },
         countCard: {
             maxWidth: "500px",
+            height: "200px"
         },
         divider: {
             background: 'grey',
@@ -129,17 +130,17 @@ export default function ListBestellen2() {
 
                 <ListItem className="listitem">
                     <Link to="/bestellen3" style={{ textDecoration: 'none', color: 'black' }}>
-                    <ListItemAvatar className="listItemAvatar">
+                        <ListItemAvatar className="listItemAvatar">
 
-                    </ListItemAvatar>
-                    <ListItemText className="listItemText">
-                        <Typography variant="h5">
-                            <TableCell className="cell1">&nbsp;</TableCell>
-                            <TableCell className="cell2"></TableCell>
-                        </Typography>
-                    </ListItemText>
-                    <ListItemSecondaryAction className="editicon">
-                    </ListItemSecondaryAction>
+                        </ListItemAvatar>
+                        <ListItemText className="listItemText">
+                            <Typography variant="h5">
+                                <TableCell className="cell1">&nbsp;</TableCell>
+                                <TableCell className="cell2"></TableCell>
+                            </Typography>
+                        </ListItemText>
+                        <ListItemSecondaryAction className="editicon">
+                        </ListItemSecondaryAction>
                     </Link>
                 </ListItem>
                 <Divider classes={{ root: classes.divider }} />

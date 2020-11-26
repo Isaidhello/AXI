@@ -45,6 +45,7 @@ export default function ListBestellen3() {
         },
         countCard: {
             maxWidth: "500px",
+            height: "200px"
         },
         divider: {
             background: 'grey',

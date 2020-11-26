@@ -44,11 +44,16 @@ export default function ListBestellen1() {
         },
         countCard: {
             maxWidth: "500px",
+            height: "200px"
         },
         divider: {
             background: 'grey',
             height: '1px',
         },
+        cell2: {
+            paddingLeft: "100px",
+
+        }
     }));
     const [count1, setCount1] = useState(Number(localStorage.getItem('count1')));
 
@@ -98,7 +103,7 @@ export default function ListBestellen1() {
                         <ListItemText className="listItemText">
                             <Typography variant="h5">
                                 <TableCell className="cell1">&nbsp;</TableCell>
-                                <TableCell className="cell2"></TableCell>
+                                <TableCell align="flex-end" className="cell2"></TableCell>
                             </Typography>
                         </ListItemText>
                     </Link>
