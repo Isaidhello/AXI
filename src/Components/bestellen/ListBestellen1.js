@@ -28,6 +28,50 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ListBestellen1() {
 
+    const useStyles = makeStyles((theme) => ({
+        root: {
+            '& > *': {
+            },
+        },
+
+        textField: {
+            width: 300,
+            margin: 100,
+        },
+        //style for font size
+        resize: {
+            fontSize: 50
+        },
+        mainContainer: {
+            height: "100vh",
+            width: "100vw"
+        },
+        countCard: {
+            maxWidth: "500px",
+        }
+    }));
+    const [count1, setCount1] = useState(Number(localStorage.getItem('count1')));
+
+    // Slide gedeelte 
+    const [checked, setChecked] = React.useState(false);
+    const handleChange = () => {
+        setChecked((prev) => !prev);
+    };
+
+    function zeepAdd() {
+        setCount1(count1 + 1);
+        localStorage.setItem('count1', (count1 + 1));
+    };
+
+    function zeepRemove() {
+        if (count1 > 0) {
+            setCount1(count1 - 1);
+            localStorage.setItem('count1', (count1 - 1));
+        }
+        else {
+            return (null);
+        }
+    };
     const classes = useStyles();
 
     return (
