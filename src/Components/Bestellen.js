@@ -130,10 +130,6 @@ function Bestellen() {
                     </Card>
                 </Grid>
 
-                <Fab variant="extended" onClick={handleToggle}>
-                    <AddIcon />
-                Handmatig toevoegen
-            </Fab>
             </Grid>
             <Backdrop className={classes.overlay} open={open} onClick={handleClose}>
                 <div className={classes.container}>
