@@ -1,5 +1,4 @@
 import React from 'react';
-import '../Homescreen.css';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -7,22 +6,17 @@ import Typography from '@material-ui/core/Typography';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import AssignmentIcon from '@material-ui/icons/Assignment';
-import LocalShippingIcon from '@material-ui/icons/LocalShipping';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import EuroIcon from '@material-ui/icons/Euro';
 import ViewWeekIcon from '@material-ui/icons/ViewWeek';
-import Badge from '@material-ui/core/Badge';
-import OwnSearchBar from './SearchBar';
 
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   homescreen: {
     width: '100vw',
-    height: '100vh',
-    background: 'linear-gradient(135deg, rgba(29,95,192,1) 0%, rgba(28,90,198,1) 100%)'
+    height: '100vh'
   },
   root: {
     flexGrow: 1,
@@ -58,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
   cardsContainer: {
     marginLeft: "7px",
     marginRight: "5px",
-    marginTop:"-100px"
+    marginTop:"-40px"
   },
   settingsContainer: {
     height: "100%"
@@ -103,60 +97,13 @@ const useStyles = makeStyles((theme) => ({
   }}
 }));
 
-const Homepage = () => {
+const ProductInfoBlokken = () => {
 
       const classes = useStyles();
 
       return( 
       <Grid container alignItems="flex-start" className={classes.homescreen}>
-       <OwnSearchBar />
       <Grid container justify="center" spacing={3} className={classes.cardsContainer}>
-
-      <Grid item xs={6} ><Link to="/bestellen" style={{textDecoration: "none"}}>
-          <Badge badgeContent={4} color="error" className={classes.badgeWidth} >
-            <Card className={classes.card} variant="outlined">
-              <CardContent className={classes.content}>
-                <Grid container item xs={12} justify="center" alignItems="center">
-                  <Grid item>
-                    <Typography className={classes.title} color="textSecondary" gutterBottom>
-                      <ShoppingCartIcon className={classes.shoppingCartIcon} />
-                    </Typography>
-                  </Grid>
-                </Grid>
-                <Grid container item xs={12} justify="center">
-                  <Grid item >
-                    <Typography variant="h5" className={classes.buttonFont}>
-                      Bestellen
-               </Typography>
-                  </Grid>
-                </Grid>
-              </CardContent>
-            </Card>
-          </Badge></Link>
-        </Grid>
-
-        <Grid item xs={6}><Link to="/schaplabel" style={{textDecoration: "none"}}>
-          <Badge badgeContent={4} color="error"  >
-            <Card className={classes.card} variant="outlined">
-              <CardContent className={classes.content}>
-                <Grid container item xs={12} justify="center">
-                  <Grid item>
-                    <Typography className={classes.title} color="textSecondary" gutterBottom>
-                      <ViewWeekIcon className={classes.viewWeekIcon} />
-                    </Typography>
-                  </Grid>
-                </Grid>
-                <Grid container item xs={12} justify="center">
-                  <Grid item>
-                    <Typography variant="h5" className={classes.buttonFont}>
-                      Schaplabel
-                  </Typography>
-                  </Grid>
-                </Grid>
-              </CardContent>
-            </Card>
-          </Badge></Link>
-        </Grid>
 
         <Grid item xs={6}><Link to="/voorraad" style={{textDecoration: "none"}}>
           <Card className={classes.card} variant="outlined">
@@ -179,20 +126,20 @@ const Homepage = () => {
           </Card></Link>
         </Grid>
 
-        <Grid item xs={6}><Link to="/binnenkomend" style={{textDecoration: "none"}}>
+        <Grid item xs={6}><Link to="/schaplabel" style={{textDecoration: "none"}}>
           <Card className={classes.card} variant="outlined">
             <CardContent className={classes.content}>
               <Grid container item xs={12} justify="center">
                 <Grid item>
                   <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    <LocalShippingIcon className={classes.localShippingIcon} />
+                    <ViewWeekIcon className={classes.localShippingIcon} />
                   </Typography>
                 </Grid>
               </Grid>
               <Grid container item xs={12} justify="center">
                 <Grid item>
                   <Typography variant="h5" className={classes.buttonFont}>
-                    Binnenkomend
+                    Schaplabel
                </Typography>
                 </Grid>
               </Grid>
@@ -246,4 +193,4 @@ const Homepage = () => {
       </Grid>
       )}
 
-export default Homepage;
+export default ProductInfoBlokken;
