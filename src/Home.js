@@ -42,7 +42,6 @@ function Home() {
 
 
     <div className={classes.main}>
-      <Header />
       <BrowserRouter>
         <Router>
           <Switch>

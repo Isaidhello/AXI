@@ -20,49 +20,9 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        backgroundColor: "white",
-        height: "100vh"
-    },
-    topBar: {
-        height: "7vh"
-    },
-    scan: {
-        backgroundColor: "#FE9D02",
-        color: "white",
-        width: "80vw",
-        marginTop: "20px"
-    },
-    scanText: {
-        padding: "10px"
-    },
-    searchbar: {
-        marginTop: "10px",
-    },
-    productList: {
-        marginTop: "10px"
-    },
+  export default function ListBestellen() {
 
     const classes = useStyles();
-
-      
-
-function ListBestellen() {
-    const classes = useStyles();
-
-    const history = useHistory();
-    const [open, setOpen] = React.useState(false);
-    const handleClose = () => {
-        setOpen(false);
-    };
-    const handleToggle = () => {
-        setOpen(!open);
-        setTimeout(() => {
-            console.log(history);
-            history.push("/home")
-          }, 2000)
-    };
 
     return (
         <div>
@@ -193,5 +153,3 @@ function ListBestellen() {
         </div>
     )
 }
-
-export default ListBestellen;
