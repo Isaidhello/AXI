@@ -74,8 +74,6 @@ function Home() {
             </Route>
 
             <Route exact path="/bestellen">
-              <OwnSearchBar style={{ marginLeft: '-5px' }} />
-              <br></br><br></br><br></br>
               <ListBestellen />
               <FABRechtsOnder />
             </Route>
