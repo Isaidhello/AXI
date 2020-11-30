@@ -60,7 +60,7 @@ export default function ListBestellen1() {
     const [count1, setCount1] = useState(Number(localStorage.getItem('count1')));
 
     // Slide gedeelte 
-    const [checked, setChecked] = React.useState(false);
+    const [checked, setChecked] = React.useState(true);
     const handleChange = () => {
         setChecked((prev) => !prev);
     };
@@ -98,7 +98,7 @@ export default function ListBestellen1() {
                 <Divider className={classes.divider} />
 
                 <ListItem className="listitem">
-                    <Link to="/bestellen2" style={{ textDecoration: 'none', color: 'black' }}>
+                    <Link to="/axi/bestellen2" style={{ textDecoration: 'none', color: 'black' }}>
                         <ListItemAvatar className="listItemAvatar">
 
                         </ListItemAvatar>

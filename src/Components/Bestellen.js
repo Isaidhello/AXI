@@ -84,7 +84,7 @@ function Bestellen() {
         setOpen(!open);
         setTimeout(() => {
             console.log(history);
-            history.push("/home")
+            history.push("/")
         }, 2000)
     };
 

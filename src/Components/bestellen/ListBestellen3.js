@@ -62,7 +62,7 @@ export default function ListBestellen3() {
     // Slide gedeelte 
     var [checked1, setChecked1] = React.useState(false);
     var [checked2, setChecked2] = React.useState(false);
-    var [checked3, setChecked3] = React.useState(false);
+    var [checked3, setChecked3] = React.useState(true);
 
     const handleChange1 = () => {
         setChecked1((prev) => !prev);

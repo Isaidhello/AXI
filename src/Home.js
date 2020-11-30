@@ -22,7 +22,7 @@ import ListBestellen3 from './Components/bestellen/ListBestellen3';
 
 import ProductInfoBlokken from './Components/afprijzen/ProductInfoBlokken';
 import ProductInfoKlein from './Components/afprijzen/ProductInfoKlein';
-
+import { Redirect } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -45,37 +45,40 @@ function Home() {
       <BrowserRouter>
         <Router>
           <Switch>
-            <Route exact path="/home" component={Homepage}>
+          <Route exact path="/axi/">
+              <Redirect to='/axi/home'/>
+            </Route>
+            <Route exact path="/axi/home" component={Homepage}>
               <Header />
               <Homepage />
 
             </Route>
-            <Route exact path="/afprijzen" component={Afprijzen}>
+            <Route exact path="/axi/afprijzen" component={Afprijzen}>
               
             </Route>
-            <Route exact path="/afprijzen/korting1">
+            <Route exact path="/axi/afprijzen/korting1">
               <OwnSearchBarDrop />
               <br></br><br></br><br></br>
               <StandardList />
-              <Link to="/producttoevoegen">Simuleer een product scan</Link>
+              <Link to="/axi/producttoevoegen">Simuleer een product scan</Link>
               <FABRechtsOnder />
             </Route>
-            <Route exact path="/afprijzen/korting2">
+            <Route exact path="/axi/afprijzen/korting2">
               korting 2
             </Route>
-            <Route exact path="/afprijzen/korting3">
+            <Route exact path="/axi/afprijzen/korting3">
               korting 3
             </Route>
-            <Route exact path="/producttoevoegen">
+            <Route exact path="/axi/producttoevoegen">
               <ProductInfo />
               <CardsHomeKlein />
             </Route>
-            <Route exact path="/productinfo">
+            <Route exact path="/axi/productinfo">
               <ProductInfoKlein />
               <ProductInfoBlokken />
             </Route>
 
-              <Route exact path="/bestellen">
+              <Route exact path="/axi/bestellen">
                 <HeaderFlow />
                 <OwnSearchBar style={{marginLeft: '-5px'}}/>
                 <br></br><br></br><br></br>
@@ -83,7 +86,7 @@ function Home() {
                 <FABRechtsOnder />
               </Route>
 
-              <Route exact path="/bestellen1">
+              <Route exact path="/axi/bestellen1">
                 <HeaderFlow />
                 <OwnSearchBar style={{marginLeft: '-5px'}}/>
                 <br></br><br></br><br></br>
@@ -91,7 +94,7 @@ function Home() {
                 <FABRechtsOnder />
               </Route>
 
-              <Route exact path="/bestellen2">
+              <Route exact path="/axi/bestellen2">
                 <HeaderFlow />
                 <OwnSearchBar style={{marginLeft: '-5px'}}/>
                 <br></br><br></br><br></br>
@@ -99,7 +102,7 @@ function Home() {
                 <FABRechtsOnder />
               </Route>
 
-              <Route exact path="/bestellen3">
+              <Route exact path="/axi/bestellen3">
                 <HeaderFlow />
                 <OwnSearchBar style={{marginLeft: '-5px'}}/>
                 <br></br><br></br><br></br>
@@ -109,32 +112,32 @@ function Home() {
 
 
 
-            <Route exact path="/schaplabel" component="">
+            <Route exact path="/axi/schaplabel" component="">
               <h1>Schaplabel</h1>
             </Route>
-            <Route exact path="/voorraad" component="">
+            <Route exact path="/axi/voorraad" component="">
               <h1>Voorraad</h1>
             </Route>
-            <Route exact path="/afschrijven" component="">
+            <Route exact path="/axi/afschrijven" component="">
               <h1>Afschrijven</h1>
             </Route>
-            <Route exact path="/producttoevoegen">
+            <Route exact path="/axi/producttoevoegen">
               <ProductInfo />
               <CardsHomeKlein />
             </Route>
-            <Route exact path="/bestellen" component="">
+            <Route exact path="/axi/bestellen" component="">
               <h1>Bestellen</h1>
             </Route>
-            <Route exact path="/schaplabel" component="">
+            <Route exact path="/axi/schaplabel" component="">
               <h1>Schaplabel</h1>
             </Route>
-            <Route exact path="/voorraad" component="">
+            <Route exact path="/axi/voorraad" component="">
               <h1>Voorraad</h1>
             </Route>
-            <Route exact path="/afschrijven" component="">
+            <Route exact path="/axi/afschrijven" component="">
               <h1>Afschrijven</h1>
             </Route>
-            <Route exact path="/binnenkomend" component="">
+            <Route exact path="/axi/binnenkomend" component="">
               <h1>Binnenkomend</h1>
             </Route>
           </Switch>

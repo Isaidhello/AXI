@@ -45,7 +45,7 @@ export default function HeaderFlow() {
   return (
     <div className={classes.root}>
       <AppBar color="primary" position="static" className={classes.appBar}>
-        <Grid container className={classes.margin}> <Link to="/home" className={classes.arrowBackIcon} >
+        <Grid container className={classes.margin}> <Link to="/axi/home" className={classes.arrowBackIcon} >
           <Grid item xs={2}>
             <ArrowBackIcon className={classes.arrowBackIcon} />
           </Grid></Link>

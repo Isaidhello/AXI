@@ -60,7 +60,7 @@ export default function ListBestellen2() {
 
     // Slide gedeelte 
     var [checked1, setChecked1] = React.useState(false);
-    var [checked2, setChecked2] = React.useState(false);
+    var [checked2, setChecked2] = React.useState(true);
 
     const handleChange1 = () => {
         setChecked1((prev) => !prev);
@@ -132,7 +132,7 @@ export default function ListBestellen2() {
                 <Divider className={classes.divider} />
 
                 <ListItem className="listitem">
-                    <Link to="/bestellen3" style={{ textDecoration: 'none', color: 'black' }}>
+                    <Link to="/axi/bestellen3" style={{ textDecoration: 'none', color: 'black' }}>
                         <ListItemAvatar className="listItemAvatar">
 
                         </ListItemAvatar>

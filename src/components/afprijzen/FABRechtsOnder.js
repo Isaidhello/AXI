@@ -63,7 +63,7 @@ export default function FABRechtsOnder() {
           <Button onClick={handleClose} color="primary">
           Annuleren
           </Button>
-          <Link to='/home'>
+          <Link to='/axi/home' style={{textDecoration: 'none'}}>
           <Button onClick={handleClose} color="primary" autoFocus>
           Bevestigen
           </Button>

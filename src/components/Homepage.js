@@ -112,7 +112,7 @@ const Homepage = () => {
        <OwnSearchBar />
       <Grid container justify="center" spacing={3} className={classes.cardsContainer}>
 
-      <Grid item xs={6} ><Link to="/bestellen" style={{textDecoration: "none"}}>
+      <Grid item xs={6} ><Link to="/axi/bestellen" style={{textDecoration: "none"}}>
           <Badge badgeContent={4} color="error" className={classes.badgeWidth} >
             <Card className={classes.card} variant="outlined">
               <CardContent className={classes.content}>
@@ -135,7 +135,7 @@ const Homepage = () => {
           </Badge></Link>
         </Grid>
 
-        <Grid item xs={6}><Link to="/schaplabel" style={{textDecoration: "none"}}>
+        <Grid item xs={6}><Link to="/axi/schaplabel" style={{textDecoration: "none"}}>
           <Badge badgeContent={4} color="error"  >
             <Card className={classes.card} variant="outlined">
               <CardContent className={classes.content}>
@@ -158,7 +158,7 @@ const Homepage = () => {
           </Badge></Link>
         </Grid>
 
-        <Grid item xs={6}><Link to="/voorraad" style={{textDecoration: "none"}}>
+        <Grid item xs={6}><Link to="/axi/voorraad" style={{textDecoration: "none"}}>
           <Card className={classes.card} variant="outlined">
             <CardContent className={classes.content}>
               <Grid container item xs={12} justify="center">
@@ -179,7 +179,7 @@ const Homepage = () => {
           </Card></Link>
         </Grid>
 
-        <Grid item xs={6}><Link to="/binnenkomend" style={{textDecoration: "none"}}>
+        <Grid item xs={6}><Link to="/axi/binnenkomend" style={{textDecoration: "none"}}>
           <Card className={classes.card} variant="outlined">
             <CardContent className={classes.content}>
               <Grid container item xs={12} justify="center">
@@ -200,7 +200,7 @@ const Homepage = () => {
           </Card></Link>
         </Grid>
 
-        <Grid item xs={6}><Link to="/afschrijven" style={{textDecoration: "none"}}>
+        <Grid item xs={6}><Link to="/axi/afschrijven" style={{textDecoration: "none"}}>
           <Card className={classes.card} variant="outlined">
             <CardContent className={classes.content}>
               <Grid container item xs={12} justify="center">
@@ -221,7 +221,7 @@ const Homepage = () => {
           </Card></Link>
         </Grid>
 
-        <Grid item xs={6}><Link to="/afprijzen" style={{textDecoration: "none"}}>
+        <Grid item xs={6}><Link to="/axi/afprijzen" style={{textDecoration: "none"}}>
           <Card className={classes.card} variant="outlined">
             <CardContent className={classes.content}>
               <Grid container item xs={12} justify="center">
