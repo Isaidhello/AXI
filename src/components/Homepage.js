@@ -3,7 +3,7 @@ import '../Homescreen.css';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-
+import { Link } from 'react-router-dom';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -15,8 +15,6 @@ import EuroIcon from '@material-ui/icons/Euro';
 import ViewWeekIcon from '@material-ui/icons/ViewWeek';
 import Badge from '@material-ui/core/Badge';
 import OwnSearchBar from './SearchBar';
-
-import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   homescreen: {
@@ -112,6 +110,7 @@ const Homepage = () => {
        <OwnSearchBar />
       <Grid container justify="center" spacing={3} className={classes.cardsContainer}>
 
+      {/* 6 Homepage knoppen */}
       <Grid item xs={6} ><Link to="/axi/bestellen" style={{textDecoration: "none"}}>
           <Badge badgeContent={4} color="error" className={classes.badgeWidth} >
             <Card className={classes.card} variant="outlined">
