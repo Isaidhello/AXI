@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function HeaderFlow() {
+export default function HeaderFlowAfrpijzen() {
   const classes = useStyles();
 
   return (
@@ -51,7 +51,7 @@ export default function HeaderFlow() {
           <Grid item xs={10} className={classes.item}>
 
             <Typography align="center" variant="h4" className={classes.text} gutterBottom>
-              Bestellen
+              Afprijzen
            <Typography align="center" variant="h6">
                 Overzicht
           </Typography>

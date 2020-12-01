@@ -60,11 +60,11 @@ export default function FABRechtsOnder() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClose} style={{color: 'black'}}>
           Annuleren
           </Button>
           <Link to='/axi/home' style={{textDecoration: 'none'}}>
-          <Button onClick={handleClose} color="primary" autoFocus>
+          <Button onClick={handleClose} autoFocus style={{backgroundColor: 'blue', color: 'white'}} variant="outlined" >
           Bevestigen
           </Button>
           </Link>

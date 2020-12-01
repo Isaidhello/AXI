@@ -39,7 +39,7 @@ export default function GradientList() {
           <div className={classes.demo}>
           <br></br><br></br><br></br>
             <List dense={dense}>
-              <Link to="/afprijzen/korting1" className={classes.link}>
+              <Link to="/axi/afprijzen/korting1" className={classes.link}>
                 <ListItem className="gradientlistitem">
                   <ListItemAvatar>
                   </ListItemAvatar>
@@ -54,7 +54,7 @@ export default function GradientList() {
                 </ListItem>
               </Link>
                   <br></br>
-              <Link to="/afprijzen/korting2" className={classes.link}>
+              <Link to="/axi/afprijzen/korting2" className={classes.link}>
                 <ListItem className="gradientlistitem">
                   <ListItemAvatar>
                   </ListItemAvatar>
@@ -69,7 +69,7 @@ export default function GradientList() {
                 </ListItem>
               </Link>
                 <br></br>
-              <Link to="/afprijzen/korting3" className={classes.link}>
+              <Link to="/axi/afprijzen/korting3" className={classes.link}>
                 <ListItem className="gradientlistitem">
                   <ListItemAvatar>
                   </ListItemAvatar>

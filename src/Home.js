@@ -9,6 +9,7 @@ import Afprijzen from './Components/afprijzen/Afprijzen.js';
 import Homepage from './Components/Homepage.js';
 import Header from './Components/Header';
 import HeaderFlow from './Components/HeaderFlow';
+import HeaderFlowAfprijzen from './Components/afprijzen/HeaderFlowAfprijzen';
 import FABRechtsOnder from './Components/afprijzen/FABRechtsOnder';
 import CardsHomeKlein from './Components/afprijzen/CardsHomeKlein';
 import ProductInfo from './Components/afprijzen/ProductInfo';
@@ -53,11 +54,15 @@ function Home() {
               <Homepage />
 
             </Route>
-            <Route exact path="/axi/afprijzen" component={Afprijzen}>
+            <Route exact path="/axi/afprijzen">
+              <HeaderFlowAfprijzen />
+              <OwnSearchBar style={{marginLeft: '-5px'}}/>
+              <Afprijzen />
               
             </Route>
             <Route exact path="/axi/afprijzen/korting1">
-              <OwnSearchBarDrop />
+              <HeaderFlowAfprijzen />
+              <OwnSearchBar style={{marginLeft: '-5px'}}/>
               <br></br><br></br><br></br>
               <StandardList />
               <Link to="/axi/producttoevoegen">Simuleer een product scan</Link>
