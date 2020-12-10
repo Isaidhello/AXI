@@ -32,7 +32,9 @@ function App() {
 
 
 ## Evy Lukassen
-
+• Made some of the components <br>
+• Making sure the right style is implemented in the components <br>
+• Going from sending list back to the home screen
 
 ## Siem Korthout
 
