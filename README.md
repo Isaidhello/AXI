@@ -1,6 +1,6 @@
 # The new PDA System for AXI
 This new PDA system was developed for AXI. It's an improved user experience over the old outdated PDA system in retail. It is meant to handle in-retail taks such as promotions, receiving freight and printing new scan labels.
-![Imgur](https://i.imgur.com/ukqovmc.png)
+![Imgur](https://i.imgur.com/ukqovmc.png | width=100)
 
 ## Libraries
 ### Material-UI
