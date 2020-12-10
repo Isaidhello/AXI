@@ -28,8 +28,11 @@ function App() {
 • Slide in of the counting card component on list item click (with Material-UI's Slide API). <br>
 • Function to prevent negative count on list items. <br>
 
-## Roy de Brie
-
+## Roy de Bie
+• Made some of the components <br>
+• Route Guarding <br>
+• Made sure the navigation worked properly <br>
+• Finished the application and upload it to server <br>
 
 ## Evy Lukassen
 • Made some of the components <br>
