@@ -20,11 +20,11 @@ function App() {
 }
 # Contributions
 ## Furkan Öztürk
-Header.js <br>
-React + Material UI workshop <br>
-Grid Lay Out (Positioning of the components) <br>
-Slide in of the counting card component on list item click (with Material-UI's Slide API). <br>
-Function to prevent negative count on list items. <br>
+• Header.js <br>
+• React + Material UI workshop <br>
+• Grid Lay Out (Positioning of the components) <br>
+• Slide in of the counting card component on list item click (with Material-UI's Slide API). <br>
+• Function to prevent negative count on list items. <br>
 
 ## Roy de Brie
 
