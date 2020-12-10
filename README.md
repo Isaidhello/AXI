@@ -3,6 +3,9 @@ This new PDA system was developed for AXI. It's an improved user experience over
 <a href="url"><img src="https://i.imgur.com/ukqovmc.png" height="500"  ></a>
 <a href="url"><img src="https://i.imgur.com/YbhlHK0.png" height="500"  ></a>
 
+## Getting started
+Clone the project and navigate to the source folder. From there, run the command `npm start` to run the application in development mode.
+
 ## Libraries
 ### Material-UI
 See https://material-ui.com/ for more information and available components/props
