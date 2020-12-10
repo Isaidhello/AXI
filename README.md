@@ -1,4 +1,44 @@
-# Getting Started with Create React App
+# The new PDA System for AXI
+This new PDA system was developed for AXI. It's an improved user experience over the old outdated PDA system in retail. It is meant to handle in-retail taks such as promotions, rece
+
+## Libraries
+### Material-UI
+See https://material-ui.com/ for more information and available components/props
+
+### NodeJS
+See https://nodejs.org/en/
+
+#### Installation
+$ npm install @material-ui/core
+
+#### Usage 
+import React from 'react';
+import { Button } from '@material-ui/core';
+
+function App() {
+  return <Button color="primary">Hello World</Button>;
+}
+# Contributions
+## Furkan Öztürk
+Header.js
+React + Material UI workshop
+Grid Lay Out (Positioning of the components)
+Slide in of the counting card component on list item click (with Material-UI's Slide API).
+Function to prevent negative count on list items.
+
+## Roy de Brie
+
+
+## Evy Lukassen
+
+
+## Siem Korthout
+
+
+## Adam Bye
+
+
+# How to run this project and all about create react app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
