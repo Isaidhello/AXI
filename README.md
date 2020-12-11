@@ -43,7 +43,9 @@ function App() {
 • Going from sending list back to the home screen
 
 ## Siem Korthout
-
+• Made some of the components <br>
+• Using Grid layout as a Base for my components<br>
+• Making sure the right style is implemented in the components <br>
 
 ## Adam Bye
 
