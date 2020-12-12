@@ -35,3 +35,5 @@ function App() {
   return <Button color="primary">Hello World</Button>;
 }
 ```
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
