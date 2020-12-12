@@ -35,33 +35,3 @@ function App() {
   return <Button color="primary">Hello World</Button>;
 }
 ```
-# Contributions
-## Furkan Öztürk
-• Header.js <br>
-• React + Material UI workshop <br>
-• Grid Lay Out (Positioning of the components) <br>
-• Slide in of the counting card component on list item click (with Material-UI's Slide API). <br>
-• Function to prevent negative count on list items. <br>
-
-## Roy de Bie
-• Made some of the components <br>
-• Route Guarding <br>
-• Made sure the navigation worked properly <br>
-• Finished the application and upload it to server <br>
-
-## Evy Lukassen
-• Made some of the components <br>
-• Making sure the right style is implemented in the components <br>
-• Going from sending list back to the home screen
-
-## Siem Korthout
-• Made some of the components <br>
-• Using Grid layout as a Base for my components<br>
-• Making sure the right style is implemented in the components <br>
-
-## Adam Bye
-## Setup
-To run this project, navigate to the local project folder inside your terminal and run:
-```bash 
-npm start
-```
