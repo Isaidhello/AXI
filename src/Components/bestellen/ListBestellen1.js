@@ -54,6 +54,7 @@ export default function ListBestellen1() {
       paddingTop: "45px",
     },
   }));
+  // UseState Hook van React
   /* Constants voor de list items, het getal dat ze krijgen komt van local storage en deze kan aangepast worden met add en remove */
   const [count1, setCount1] = useState(Number(localStorage.getItem("count1")));
 
@@ -68,6 +69,7 @@ export default function ListBestellen1() {
     localStorage.setItem("count1", count1 + 1);
   }
 
+  // Zodat het niet negatief kan zijn
   function zeepRemove() {
     if (count1 > 0) {
       setCount1(count1 - 1);
@@ -221,28 +223,28 @@ export default function ListBestellen1() {
         <Divider classes={{ root: classes.divider }} />
       </List>
 
-      {/* Popup waarin hoeveelheid aangepast kan worden */} 
+      {/* Popup waarin hoeveelheid aangepast kan worden */}
       <Grid item container justify="center" direction="row-reverse" xs={12}>
-                <Grid item>
-                    <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
-                        <Card className={classes.countCard}>
-                            <CardContent className={classes.contentCount}>
-                                <Grid container item justify="center" alignItems="center" direction="row">
-                                    <Grid item container justify="center" alignItems="center" xs={4}>
-                                        <RemoveCircleOutlineOutlinedIcon style={{ fontSize: 100 }} color='secondary' onClick={zeepRemove} />
-                                    </Grid>
-                                    <Grid item container justify="center" alignItems="center" xs={2}>
-                                        <TextField maxValue='3' type='number' id="outlined-basic" InputProps={{ style: { fontSize: 40 } }} variant="outlined" value={count1} />
-                                    </Grid>
-                                    <Grid item container justify="center" alignItems="center" xs={4}>
-                                        <AddCircleIcon style={{ fontSize: 100 }} color='secondary' onClick={zeepAdd} />
-                                    </Grid>
-                                </Grid>
-                            </CardContent>
-                        </Card>
-                    </Slide>
+        <Grid item>
+          <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
+            <Card className={classes.countCard}>
+              <CardContent className={classes.contentCount}>
+                <Grid container item justify="center" alignItems="center" direction="row">
+                  <Grid item container justify="center" alignItems="center" xs={4}>
+                    <RemoveCircleOutlineOutlinedIcon style={{ fontSize: 100 }} color='secondary' onClick={zeepRemove} />
+                  </Grid>
+                  <Grid item container justify="center" alignItems="center" xs={2}>
+                    <TextField maxValue='3' type='number' id="outlined-basic" InputProps={{ style: { fontSize: 40 } }} variant="outlined" value={count1} />
+                  </Grid>
+                  <Grid item container justify="center" alignItems="center" xs={4}>
+                    <AddCircleIcon style={{ fontSize: 100 }} color='secondary' onClick={zeepAdd} />
+                  </Grid>
                 </Grid>
-            </Grid>
+              </CardContent>
+            </Card>
+          </Slide>
+        </Grid>
+      </Grid>
     </div>
   );
 }
