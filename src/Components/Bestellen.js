@@ -108,7 +108,7 @@ function Bestellen() {
             }}
           />
         </Grid>
-        
+
         {/* List met gescande producten */}
         <Grid item xs={12} className={classes.productList}>
           <List component="nav" aria-label="main mailbox folders">
@@ -135,7 +135,7 @@ function Bestellen() {
             </ListItemLink>
           </List>
         </Grid>
-        
+
         {/* Scan een (volgend) product balk */}
         <Grid item container xs={12} justify="center">
           <Card raised={false} className={classes.scan} align="center">
@@ -144,13 +144,14 @@ function Bestellen() {
             </Typography>
           </Card>
         </Grid>
-
+        {/* De floating action button die de handmatig toevoegen van een levering regelt */}
         <Fab variant="extended" onClick={handleToggle}>
           <AddIcon />
           Handmatig toevoegen
         </Fab>
       </Grid>
 
+      {/* Backdrop is een overlay van MUI.  Dit is de bevestigingsscherm voor het succesvol opsturen van een lijst */}
       <Backdrop className={classes.overlay} open={open} onClick={handleClose}>
         <div className={classes.container}>
           <IconButton className={classes.item}>
@@ -162,6 +163,7 @@ function Bestellen() {
         </div>
       </Backdrop>
 
+      {/* De kaart waarin het veranderen van de bestelde hoeveelheid aangepast kan worden */}
       <Card>
         <CardContent>
           <Grid
