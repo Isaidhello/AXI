@@ -173,6 +173,7 @@ function Bestellen() {
             alignItems="center"
             direction="row"
           >
+            {/* Verminder knop voor het verminderen van de hoeveelheid */}
             <Grid item container justify="center" alignItems="center" xs={4}>
               <RemoveCircleOutlineOutlinedIcon
                 style={{ fontSize: 100 }}
@@ -180,6 +181,7 @@ function Bestellen() {
               ></RemoveCircleOutlineOutlinedIcon>
             </Grid>
 
+            {/* Nummerveld die de hoeveelheid aangeeft */}
             <Grid item container justify="center" alignItems="center" xs={2}>
               <TextField
                 maxValue="3"
@@ -189,7 +191,7 @@ function Bestellen() {
                 variant="outlined"
               />
             </Grid>
-
+            {/* Toevoeg knop voor het verhogen van de hoeveelheid */}
             <Grid item container justify="center" alignItems="center" xs={4}>
               <AddCircleIcon
                 style={{ fontSize: 100 }}
