@@ -36,4 +36,4 @@ function App() {
 }
 ```
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/Isaidhello/AXI/blob/master/LICENSE)
