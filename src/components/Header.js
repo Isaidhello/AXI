@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%"
   },
   link: {
-    textDecoration:'none'
+    textDecoration: 'none'
   }
 }));
 
@@ -82,9 +82,9 @@ const Header = () => {
     setAnchorEl(null);
   };
 
-      return( 
-        <div>
-          {/* Appbar */}
+  return (
+    <div>
+      {/* Appbar */}
       <AppBar position="static" color="default" className={classes.appBar}>
         <Toolbar>
 
@@ -93,12 +93,13 @@ const Header = () => {
           </IconButton>
 
           {/* Titel bedrijf, werkenemer en functie */}
+          {/* Hierbij is de title class gecentreerd en de subtitles even van elkaar uitzgezet links en rechts */}
           <Grid container justify="center" direction="column" spacing={2}>
             <Grid container item xs={12} justify="center">
               <Grid item>
                 <Typography variant="h4" className={classes.title}>
                   Dille & Kamille
-          </Typography>
+                </Typography>
               </Grid>
             </Grid>
 
@@ -132,7 +133,7 @@ const Header = () => {
                 onClick={handleMenu}
                 color="inherit"
               >
-                {/* Work in progress menu en settings icon verdelen in grid items/containers */}
+                {/* Openstaande taken menu en settings icon verdelen in grid items/containers */}
                 <Grid container alignItems="center" className={classes.settingsContainer}>
                   <Grid item>
                     <SettingsIcon className={classes.settingsIcon} />
@@ -155,6 +156,7 @@ const Header = () => {
                 open={open}
                 onClose={handleClose}
               >
+                {/* on click functie voor het sluiten van de menu items */}
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
               </Menu>
@@ -162,7 +164,8 @@ const Header = () => {
           )}
         </Toolbar>
       </AppBar>
-        </div>
-      )}
+    </div>
+  )
+}
 
 export default Header;
