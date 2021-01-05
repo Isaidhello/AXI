@@ -59,17 +59,22 @@ export default function ListBestellen1() {
   const [count1, setCount1] = useState(Number(localStorage.getItem("count1")));
 
   // Slide gedeelte
+  // Dmv React's state hooks wordt er hier een variabele en een functie aangemaakt
+  // Zie ook https://reactjs.org/docs/hooks-state.html
   const [checked, setChecked] = React.useState(true);
   const handleChange = () => {
     setChecked((prev) => !prev);
   };
 
+  // Functie voor het verhogen van een hoeveelheid
+  // Hier wordt de functie die was aangeleverd bij de hook gebruikt om 'count1' aan te passen
   function zeepAdd() {
     setCount1(count1 + 1);
     localStorage.setItem("count1", count1 + 1);
   }
 
-  // Zodat het niet negatief kan zijn
+  // If statement zodat het niet negatief kan zijn
+  // Zolang count boven 0 is werkt het en anders word er niks uitgevoerd
   function zeepRemove() {
     if (count1 > 0) {
       setCount1(count1 - 1);
@@ -114,6 +119,7 @@ export default function ListBestellen1() {
         </ListItem>
         <Divider classes={{ root: classes.divider }} />
 
+        {/* Vanaf hier lege item regels ter demonstratie van een complete lijst met listitem en een divider */}
         <ListItem className="listitem">
           <ListItemAvatar className="listItemAvatar"></ListItemAvatar>
           <ListItemText className="listItemText">
